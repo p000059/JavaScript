@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>JavaScript in HTML</title>
+    </head>
+<body>
+
+    <p id="array"></p>
+    <p id="size"></p>
+    <p id="lastPosition"></p>
+    <p id="total"></p>
+
+    <script>
+
+        let corBandeira = ["Branca", "Verde", "Amarela"];
+        corBandeira.push("Preta");
+
+
+        document.getElementById("array").innerHTML = "Array[] = " + corBandeira[0];
+        document.getElementById("size").innerHTML = "Array[] = " + corBandeira.length;
+        document.getElementById("lastPosition").innerHTML = "Array[] = " + corBandeira[corBandeira.length - 1];
+        document.getElementById("total").innerHTML = "Array[" + corBandeira + "]";
+
+    </script>
+
+</body>
+</html>
