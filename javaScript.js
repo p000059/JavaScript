@@ -1,0 +1,1 @@
+var variavelAteProva = "String";
