@@ -28,3 +28,8 @@ function girarVolante(anguloRotacao){
 
     return "Volante a " + rotacaoVolante + "º";
 }
+
+function calculaIMC(altura, peso){
+    let IMC = peso / (altura * altura);
+    return IMC;
+}
