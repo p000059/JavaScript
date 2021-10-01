@@ -12,17 +12,20 @@
     *****
 */
 
-let n = 2;
+let n = 3;
 
 function imprimaQuadradosAsterisco(n){
 
-    
-    for(let i = 0; i < n; i ++){
-        for(let j = 0; j < n; n++){
-            console.log("*");
+    for (var index = 0; index < n; index++) {
+        
+        var linhaDeAsteriscos = '';
+      
+        for (var linha = 0; linha < n; linha++) {
+          linhaDeAsteriscos = linhaDeAsteriscos + '*';
         }
+      
+        console.log(linhaDeAsteriscos);
     }
-
 }
 
 imprimaQuadradosAsterisco(n);
