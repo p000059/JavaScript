@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>JavaScript in HTML</title>
+    </head>
+<body>
+
+    <p id="diaEnsolarado"></p>
+    <p id="ehFinalDeSemana"></p>
+    <p id="resultado"></p>
+    
+    <p id="nota"></p>
+
+    <script>
+
+        let diaEnsolarado = true;
+        let ehFinalDeSemanda = true;
+    
+        document.getElementById("diaEnsolarado").innerHTML = "O dia está ensolarado? R = " + diaEnsolarado;
+        document.getElementById("ehFinalDeSemana").innerHTML = "É final de semanda? R = " + ehFinalDeSemanda;
+        
+        if(diaEnsolarado === ehFinalDeSemanda){
+            document.getElementById("resultado").innerHTML = "Vou à praia.";
+        }
+        else if(diaEnsolarado !== ehFinalDeSemanda){
+            document.getElementById("resultado").innerHTML = "Não vou à praia.";
+        }
+        else{
+            document.getElementById("resultado").innerHTML = "A decidir";
+        }
+
+    </script>
+    
+    
+    
+    
+</body>
+</html>

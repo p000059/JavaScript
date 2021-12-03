@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>JavaScript in HTML</title>
+    </head>
+<body>
+
+    <p id="description"></p>
+    <p id="array"></p>
+    <p id="size"></p>
+    <p id="number"></p>
+    <p id="lastPosition"></p>
+    <p id="total"></p>
+
+    <script>
+
+        let arrayMultType = ["Branca", 39, true];
+        arrayMultType.push(false);
+
+        document.getElementById("description").innerHTML = "Array de multiplos tipos";
+        document.getElementById("array").innerHTML = "Array[] String =  " + arrayMultType[0];
+        document.getElementById("size").innerHTML = "Array[] Tamanho total = " + arrayMultType.length;
+        document.getElementById("number").innerHTML = "Array[] tipo número = " + arrayMultType[1];
+        document.getElementById("lastPosition").innerHTML = "Array[] ultima posição = " + arrayMultType[arrayMultType.length - 1];
+        document.getElementById("total").innerHTML = "Array[" + arrayMultType + "]";
+
+    </script>
+
+</body>
+</html>
