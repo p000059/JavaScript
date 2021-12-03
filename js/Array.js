@@ -1,8 +1,13 @@
-//Arrays são tipos especiais de objetos. No exemplo abaixo, ambos podem podem ser verificados com typeof(), onde o retorno será um objeto.
+//A função abaixo vai atribuir a cada id do HTML uma operação em referência ao Array.
 
-let person = {firstName:"John", lastName:"Doe", age:46};
-let person1 = ["John", "Doe", 46];
+function showElements(){
+    
+    let corBandeira = ["Vermelha", "Amarela", "Preta", "Branca", "Quadriculada"];
 
-console.log(person);
+    document.getElementById("array").innerHTML = "Array[0] = " + corBandeira[0]; //Mostra índice na posição 0
+    document.getElementById("size").innerHTML = "Array.length = " + corBandeira.length; //Mostra tamanho da bandeira
+    document.getElementById("lastPosition").innerHTML = "Array[length - 1] = " + corBandeira[corBandeira.length - 1]; //Mostra a última posição do Array
+    document.getElementById("total").innerHTML = "Array[" + corBandeira + "]"; //Mostra todo o contéudo do Array.
+}
 
 
