@@ -45,23 +45,23 @@ function createThead(obj){
         console.log(item,indice);
     });
 
-    // obj.forEach(increment);
+    obj.forEach(increment);
 
-    // function increment(element){
+    function increment(element){
 
-    //     let tr = document.createElement('tr');
+        let tr = document.createElement('tr');
         
-    //     for (let i in element){
+        for (let i in element){
             
-    //         let th = document.createElement('th');
-    //         th.innerHTML = i.toUpperCase();
-    //         tr.appendChild(th);
-    //     }
+            let th = document.createElement('th');
+            th.innerHTML = i.toUpperCase();
+            tr.appendChild(th);
+        }
 
-    //     thead.className = "table-dark";
-    //     thead.appendChild(tr);
+        thead.className = "table-dark";
+        thead.appendChild(tr);
         
-    // }
+    }
 
     return thead;
 }
