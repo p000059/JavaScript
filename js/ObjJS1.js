@@ -15,7 +15,6 @@ function loadJSON(){
     let obj = JSON.parse(objJSON);
     
     return obj;
-
 }
 
 function showObject(){
