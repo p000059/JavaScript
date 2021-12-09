@@ -35,8 +35,6 @@ class Person{
             
             td_acoes.appendChild(imgEdit);
             td_acoes.appendChild(imgDelete);
-            
-            console.log(this.arrayPerson);
         }
     }
 
@@ -52,7 +50,6 @@ class Person{
             }
         }
         
-        console.log(this.arrayPerson);
         this.listTable();
         this.cancel();
     }
@@ -94,8 +91,12 @@ class Person{
     }
 
     cancel(){
+        
         document.getElementById('name').value = '';
         document.getElementById('email').value = '';
+
+        document.getElementById('btn1').innerText = 'Salvar';
+        this.editID = null;
     }
     
     delete(id){
@@ -136,3 +137,21 @@ class Person{
 
 var person = new Person();
 
+function listItens(items, pageActual, limitItems){
+    let result = [];
+    let totalPage = Math.ceil(items.length / limitItems);
+    let count = (pageActual * limitItems) - limitItems;
+    let delimiter = count + limitItems;
+
+    if(pageActual <= totalPage){
+        for(let i = count; i < delimiter; i++){
+            if(items[i] != null){
+                result.push(items[i]);
+                count++;
+            }
+        }
+    }
+
+
+    return result;
+}

@@ -14,59 +14,75 @@
         </title>
 
         <script type="text/javascript" src="js/CRUD01.JS"></script>
-        <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.esm.js"></script>
-        <script type="text/javascript" src="js/bootstrap.bundle.js"></script> -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
         
-        <link type="text/css" rel="stylesheet" href="css/CRUD.css">
-        <!-- <link type="text/css" rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <link type="text/css" rel="stylesheet" href="css/Custon.css">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap-grid.min.css">
         <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-        <link type="text/css" rel="stylesheet" href="css/bootstrap-reboot.min.css">
-        <link type="text/css" rel="stylesheet" href="css/bootstrap-utilities.min.css">
-        <link type="text/css" rel="stylesheet" href="css/bootstrap.rtl.min.css"> -->
-
     </head>
 
 <body>
-    
-    <header>
-        <h1>Cadastro de Pessoas</h1>
-    </header>
-    
-    <main>
-        <div class="card">
-            <div class="line-input">
-                <label>Pessoa</label>
-                <input class="form-control" type="text" id="name" placeholder="Digite o nome">
-            </div>
-            <div class="line-input">
-                <label>Email</label>
-                <input class="form-control" type="text" id="email" placeholder="Digite o email">
-            </div>
-            <div class="line-input">
-                <button id="btn1" onclick="person.save()">Salvar</button>
-                <button onclick="person.cancel()">Cancelar</button>     
+    <div class="container">
+        <div class="row">            
+            <div  class="header col">
+                <h1>Cadastro de Pessoas</h1>
             </div>
         </div>
-              
-        <div class="content">
-            
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="center">Id</th>
-                            <th>Nome</th>
-                            <th>Email</th>
-                            <th class="center">Editar Excluir</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody">
-                        
-                    </tbody>
-                </table>
+        <div class="row">
+            <div class="main col">
+                <div class="row">
+                    <div class="card bt-3 mt3">
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Nome</span>
+                                <input id="name" type="text" class="form-control" placeholder="Digite o nome" name="usrname">
+                            </div>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text">Email</span>
+                              <input id="email" type="text" class="form-control" placeholder="Digite o email" name="email">
+                            </div>
+                            <div>
+                                <button type="submit" class="buttonCheck" onclick="person.save()" id="btn1">Salvar</button>
+                                <button type="submit" class="buttonCheck" onclick="person.cancel()">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3 mt-3">
+                        <div class="table table-striped table-bordered table-hover">
+                            <table>
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th class="center">Id</th>
+                                        <th>Nome</th>
+                                        <th>Email</th>
+                                        <th class="center">Editar / Excluir</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="bt-3 mt-3">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><<</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">>></a></li>
+                            </ul>                
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
-
+    </div>
 </body>
 </html>
