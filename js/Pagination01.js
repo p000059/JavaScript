@@ -31,7 +31,8 @@ let perPage = 5;
 let state = {
     page: 1,
     perPage,
-    totalPage: Math.ceil(data.length / perPage)
+    totalPage: Math.ceil(data.length / perPage),
+    maxVisibleButtons: 5
 }
 
 let html = {
@@ -61,12 +62,14 @@ let controls = {
     },
     
     goTo(page){
-        state.page = page;
-
+        
         if(state.page > state.totalPage){
             state.page = state.totalPage;
         }
-        else if(state.page < 1){
+        
+        state.page = +page;
+        
+        if(state.page < 1){
             state.page = 1;
         }
     },
@@ -98,7 +101,6 @@ let controls = {
 let list = {
     create(item){
 
-        console.log(item);
         let div = document.createElement('div');
         div.classList.add('item');
         div.innerHTML = item;
@@ -107,7 +109,7 @@ let list = {
     },
 
     update(){
-        // console.log('Intro object list atribute update')
+        
         html.get('.list').innerHTML = "";
         let page = state.page -1;
         let start = page * state.perPage;
@@ -120,11 +122,62 @@ let list = {
 }
 
 let buttons = {
-    create(){
+    
+    element: html.get('#paginate .numbers'),
 
+    create(number){
+        let button = document.createElement('div');
+
+        button.innerHTML = number;
+
+        if(state.page == number){
+            button.classList.add('active');
+
+        }
+
+        button.addEventListener('click',(event) => {
+            let page = event.target.innerText;
+            controls.goTo(page);
+            update();
+        })
+        
+        buttons.element.appendChild(button);
     },
+
     update(){
-        html.get('.numbers').innerHTML = "";
+        
+        buttons.element.innerHTML = "";
+        let {maxLeft, maxRight} = buttons.calculateMaxVisible();
+
+        for(let page = maxLeft; page <= maxRight; page++){
+            buttons.create(page);
+        }
+        
+    },
+    
+    calculateMaxVisible(){
+        
+        let maxVisibleButtons = state.maxVisibleButtons;
+
+        let maxLeft = (state.page - Math.floor(maxVisibleButtons / 2));
+        let maxRight = (state.page + Math.floor(maxVisibleButtons / 2));
+
+        if(maxLeft < 1){
+            maxLeft = 1;
+            maxRight = maxVisibleButtons;
+        }
+
+        if(maxRight > state.totalPage){
+            maxLeft = state.totalPage - (maxVisibleButtons -1);
+            maxRight = state.totalPage
+            
+            if(maxLeft < 1){
+                
+                maxLeft = 1
+            } 
+        }
+
+        return {maxLeft, maxRight};
     }
 }
 
@@ -140,7 +193,4 @@ function init(){
 
 init();
 
-// console.log("Página Atual: " + state.page);
-// controls.goTo(90);
-// console.log("Para a página: " + state.page);
 
