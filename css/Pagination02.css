@@ -1,31 +1,31 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
 
-:root {
+/* :root {
     --black: #130f0d;
     --primary: hsl(32, 98%, 56%);
     --white: #f0f0f9;
-}
+} */
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
  
-button,
+/* button,
 input {
     font-family: 'Roboto', sans-serif;
     border:darkblue;
-}
+} */
 
-body {
+/* body {
     height: 100vh;
 
     background-color: var(--black);
     color: var(--white);
-}
+} */
 
 header {
     display: flex;

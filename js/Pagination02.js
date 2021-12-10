@@ -123,7 +123,7 @@ let list = {
 
 let buttons = {
     
-    element: html.get('#paginate .numbers'),
+    element: html.get('.numbers'),
 
     create(number){
         let button = document.createElement('div');
@@ -131,7 +131,12 @@ let buttons = {
         button.innerHTML = number;
 
         if(state.page == number){
-            button.classList.add('active');
+            
+            button.className = 'active';
+            //button.className = 'page-item';
+            button.className = 'page-link';
+
+            //button.className = 'numbers'
 
         }
 
