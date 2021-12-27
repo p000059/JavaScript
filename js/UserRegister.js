@@ -1,6 +1,6 @@
-let addObj = [{name: "Marcos", email: "marcos.pontes@gmail.com"},{name: "Luciana", email: "luciana.alves@gmail.com"}]
+let addObj = [{ name: "Marcos", email: "marcos.pontes@gmail.com" }, { name: "Luciana", email: "luciana.alves@gmail.com" }]
 
-function loadAjax(){
+function loadAjax() {
 
     let xhttp = new XMLHttpRequest();
 
@@ -11,13 +11,13 @@ function loadAjax(){
 }
 
 
-function objJavaScript(){
+function objJavaScript() {
 
     let obj = loadAjax();
     return obj;
 }
 
-function createTable(){
+function createTable() {
 
     let table = document.querySelector('table');
     let obj = objJavaScript();
@@ -30,29 +30,21 @@ function createTable(){
     table.appendChild(thead);
     table.appendChild(tbody);
     table.appendChild(tfoot);
-    
+
 }
 
-function createThead(obj){
+function createThead(obj) {
 
     let thead = document.createElement('thead');
-    
-    //createItem(addObj);
-    // objJSript.push({name:"Mariele", email:"mariele.santos@gmail.com"});
-
-
-    objJavaScript().forEach(function (item, indice, array){
-        console.log(item,indice);
-    });
 
     obj.forEach(increment);
 
-    function increment(element){
+    function increment(element) {
 
         let tr = document.createElement('tr');
-        
-        for (let i in element){
-            
+
+        for (let i in element) {
+
             let th = document.createElement('th');
             th.innerHTML = i.toUpperCase();
             tr.appendChild(th);
@@ -60,35 +52,34 @@ function createThead(obj){
 
         thead.className = "table-dark";
         thead.appendChild(tr);
-        
     }
 
     return thead;
 }
 
-function createTbody(obj){
-    
+function createTbody(obj) {
+
     let tbody = document.createElement('tbody');
-    
-    obj.forEach(increment); 
-    
-    function increment(element){
-        
+
+    obj.forEach(increment);
+
+    function increment(element) {
+
         let tr = document.createElement('tr');
-        
-        for(let i in element){
-            
+
+        for (let i in element) {
+
             let td = document.createElement('td');
             td.innerHTML = element[i];
             tr.appendChild(td);
         }
 
-        tbody.appendChild(tr);     
+        tbody.appendChild(tr);
     }
     return tbody;
 }
 
-function createTfoot(){
+function createTfoot() {
 
     let tfoot = document.createElement('tfoot');
     let tr = document.createElement('tr');
@@ -102,15 +93,14 @@ function createTfoot(){
     return tfoot;
 }
 
-function createItem(){
+function createItem() {
 
 }
 
-function updateItem(){
+function updateItem() {
 
 }
 
-function deleteItem(){
+function deleteItem() {
 
 }
-
