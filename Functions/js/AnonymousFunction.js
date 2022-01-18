@@ -43,4 +43,7 @@ function fatorial(n){
     return fat;
 }
 
-console.log(5)
+function countWhile(n){
+
+    
+}
