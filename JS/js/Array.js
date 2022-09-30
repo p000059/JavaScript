@@ -49,26 +49,6 @@ function mtel(v) {
     return v;
 }
 
-function openModal() {
-
-    let modal = document.getElementById('openModal');
-
-    if (typeof modal == 'undefined' || modal == null) {
-        return;
-    }
-    modal.style.display = 'block';
-
-}
-
-function closeModal() {
-    let modal = document.getElementById('openModal');
-
-    if (typeof modal == 'undefined' || modal == null) {
-        return;
-    }
-    modal.style.display = 'none';
-}
-
 function showArray() {
 
     let table = document.getElementById('tableArray1');
