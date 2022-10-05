@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Show Arrows Functions">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="keywords" content="Array, Map, arrow functions, map, filter">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Show Functions</title>
+    <script type="text/javascript" src="js/AnonymousFunction.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.esm.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link type="text/css" rel="stylesheet" href="css/custom.css">
+    <link rel="shortcut icon" href="img/82IT.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <span class="container-cyan bg-dark text-white border rounded-3 d-block align-content-center">
+                            <h1 class="d-flex justify-content-center">Funções em JavaScript</h1> 
+                        </span>
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="container-fluid">
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                    <div class="navbar-nav">
+                                        <a class="nav-link active" aria-current="page" href="#">Functions</a>
+                                        <a class="nav-link" href="pages/Map.html">Map</a>
+                                        <a class="nav-link" href="pages/Filter.html">Filter</a>
+                                        <a class="nav-link" href="pages/Reduce.html">Reduce</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row bt-3 mt-3">
+                    <div class="col">
+
+                        <div id="pageFunctionMap">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-floating mb-2">
+                                        <input type="text" class="form-control content" id="name" placeholder="Digite aqui">
+                                        <label for="floatingInput">Funções MAP:</label>
+                                    </div>
+                                    <div class="form-floating mb-2">
+                                        <input type="email" class="form-control content" id="email" placeholder="Digite aqui">
+                                        <label for="floatingInput">Digite seu email:</label>
+                                    </div>
+                                    <div class="form-floating mb-2">
+                                        <input type="text" name="fone" id="fone" class="form-control content" placeholder="Digite aqui">
+                                        <label for="floatingInput">Digite seu Telefone: </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 d-grid">
+                                    <button type="button" data-toggle="modal" class="btn btn-secondary btn-block" onclick="showArray()">Array Inicial</button>
+                                </div>
+                                <div class="col-4 d-grid">
+                                    <button type="button" data-toggle="button" class="btn btn-secondary btn-block" onclick="updateObject()">Alterar Registro</button>
+                                </div>
+                                <div class="col-4 d-grid">
+                                    <button type="button" data-toggle="button" class="btn btn-secondary btn-block" onclick="listAllObjects()">Listar Registros</button>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-4 d-grid">
+                                    <button type="button" class="btn btn-secondary btn-block" onclick="deleteObject()">Apagar registro</button>
+                                </div>
+                                <div class="col-4 d-grid">
+                                    <button type="button" class="btn btn-secondary btn-block" onclick="readAnObject()">Pesquisar registro</button>
+                                </div>
+                                <div class="col-4 d-grid">
+                                    <button type="button" class="btn btn-secondary btn-block" onclick="clearFields()">Limpar Campos</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+
+                            <div class="row row-cols-6">
+                                <div class="border form-control text-center content col-2">Coluan</div>
+                                <div class="border form-control text-center content col-10">Column 1.2</div>
+                                <div class="border form-control text-center content col-2">Column</div>
+                                <div class="border form-control text-center content col-10">Column</div>
+                                <div class="border form-control text-center content col-2">Column</div>
+                                <div class="border form-control text-center content col-10">Column</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

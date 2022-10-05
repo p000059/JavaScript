@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Marcelo Guimba">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="DOM, document, document.getElementById, getElementById, Basic Javascript, JS, select, option, array">
+    <meta name="decriptiton" content="Show Array">
+    <title>Array</title>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Array.js"></script>
+    <script src="js/Masks.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/custom.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link type="image/x-icon" rel="shortcut icon" href="img/82IT.ico">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col">
+            <header class="header-format">
+                Arrays
+            </header>
+            <main class="row bt-3 mt-3">
+                <section class="col-6">
+                    <form class="row">
+                        <section class="col">
+                            <article class="form-floating mb-2">
+                                <input type="text" class="form-control content" id="name" placeholder="Digite">
+                                <label>Digite seu nome:</label>
+                            </article>
+                            <article class="form-floating mb-2">
+                                <input type="email" class="form-control content" id="email" placeholder="Digite aqui">
+                                <label>Digite seu email:</label>
+                            </article>
+                            <article class="form-floating mb-2">
+                                <input type="text" name="fone" id="fone" class="form-control content"
+                                    placeholder="(00) 00000-0000" maxlength="15" />
+                                <label>Digite seu Telefone: </label>
+                            </article>
+                            <article class="form-floating mb-2">
+                                <input type="text" name="cpf" id="cpf" class="form-control content"
+                                    placeholder="000.000.000-00" maxlength="14" />
+                                <label>CPF: </label>
+                            </article>
+                        </section>
+                    </form>
+                    <section class="row">
+                        <article class="col-4 d-grid">
+                            <button type="button" data-toggle="modal" class="buttonForm" onclick="createObject()">Gravar
+                                Registro</button>
+                        </article>
+                        <article class="col-4 d-grid">
+                            <button type="button" data-toggle="button" class="buttonForm"
+                                onclick="updateObject()">Alterar Registro</button>
+                        </article>
+                        <article class="col-4 d-grid">
+                            <button type="button" data-toggle="button" class="buttonForm"
+                                onclick="listAllObjects()">Listar Registros</button>
+                        </article>
+                    </section>
+                    <section class="row mt-2">
+                        <article class="col-4 d-grid">
+                            <button type="button" class="buttonForm" onclick="deleteObject()">Apagar registro</button>
+                        </article>
+                        <article class="col-4 d-grid">
+                            <button type="button" class="buttonForm" onclick="clearTable()">Limpar
+                                Tabela</button>
+                        </article>
+                        <article class="col-4 d-grid">
+                            <button type="button" class="buttonForm" onclick="clearFields()">Limpar
+                                Campos</button>
+                        </article>
+                    </section>
+                    <section class="row mt-2">
+                        <article class="col-8 d-grid">
+                            <input type="search" id="item" >
+                        </article>
+                        <article class="col-4 d-grid">
+                            <button type="button" class="buttonForm" onclick="readAnObject()">Pesquisar registro</button>
+                        </article>
+                    </section>
+                </section>
+                <section class="col-6">
+                    <aside class="row">
+                        <div class="col container-fluid">
+                            <div class="mb-3">
+                                <table id="tableDecryptWord" class="table table-bordered table-hover table-striped">
+                                    <thead class="table-success">
+                                        <tr>
+                                            <th class="font-size: 14px">
+                                                Nome
+                                            </th>
+                                            <th class="font-size: 14px">
+                                                Email
+                                            </th>
+                                            <th class="font-size: 14px">
+                                                Telefone
+                                            </th>
+                                            <th class="font-size: 14px">
+                                                CPF
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="resultTbody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </aside>
+                </section>
+            </main>
+            <footer class="footer-format">
+                <small>&copy;Guimba - 2022</small>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
