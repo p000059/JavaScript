@@ -20,6 +20,7 @@ function createObject() {
     let email = document.getElementById('email').value;
     let fone = document.getElementById('fone').value;
     let cpf = document.getElementById('cpf').value;
+    let x = document.getElementsByTagName('x');
 
     let objPerson = new Object()
 
