@@ -2,63 +2,50 @@
 <html lang="en-US">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="author" content="Marcelo Guimba">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="DOM, document, document.getElementById, getElementById, Basic Javascript, for, Array, innerHTML, .value">
+    <meta name="keywords"
+        content="DOM, document, document.getElementById, getElementById, Basic Javascript, for, Array, innerHTML, .value">
     <meta name="decriptiton" content="Show ArraySample">
     <title>Show Array Sample</title>
-    <script type="text/javascript" src="/ProgsJavaScript/js/ArraySingle.js"></script>
-    <script type="text/javascript" src="/ProgsJavaScript/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/ProgsJavaScript/js/bootstrap.bundle.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="/ProgsJavaScript/css/bootstrap-grid.min.css">
-    <link type="text/css" rel="stylesheet" href="/ProgsJavaScript/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="/ProgsJavaScript/css/bootstrap-utilities.min.css">
-    <link rel="shortcut icon" href="/ProgsJavaScript/img/82IT.ico" />
+    <script src="js/ArraySingle.js"></script>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/ArraySingle.css">
+    <link rel="shortcut icon" href="img/82IT.ico">
 </head>
 
 <body>
-    <div class="container bt-3 mt-3">
-        <div class="row">
-            <div class="col">
-                <span class="container bg-dark text-white border rounded-3 d-block align-content-center">
-                    <h1 class="d-flex justify-content-center">Cadastra em um Array e mostra resultado</h1> 
-                </span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-3">
-                <div class="row">
-                    <div class="col">
-                        <div class="bt-2 mt-2 list-group">
-                            <a href="#" onclick="showArray()" class="list-group-item list-group-item-action">Listar Escolha</a>
-                            <a href="#" onclick="registerArray()" class="list-group-item list-group-item-action">Cadastrar no Array</a>
-                            <a href="#" onclick="clearFields()" class="list-group-item list-group-item-action">Limpar Campos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-9">
-                <div class="row">
-                    <div class="col" id="divForm">
-                        <div class="input-group bt-2 mt-2">
-                            <span class="input-group-text">Variável</span>
-                            <input type="text" class="form-control" placeholder="Digite uma variável" id="variableOne">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2 bt-2 mt-2">
-                        <button class="btn btn-primary" type="button" onclick="createDiv()">Criar Campo</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div id="idTable">
 
-                        </div>
-                    </div>
+    <header class="header-format">
+        Cadastra Array e Mostra Resultado
+    </header>
+    <main>
+        <form class="box">
+            <section>
+                <H3>Registro de Usuário</H3>
+                <div>
+                    <label>Nome:</label>
+                    <input type="text" id="name">
                 </div>
-            </div>
-        </div>
-    </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" id="email">
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input type="password" id="password">
+                </div>
+                <button type="button" class="buttonForm" onclick="registerArray()">Salvar</button>
+                <button type="button" class="buttonForm" onclick="showArray()">Mostrar</button>
+                <button type="button" class="buttonForm" onclick="clearFields()">Limpar</button>
+            </section>
+            <section id="idTable">
+            </section>
+        </form>
+    </main>
+    <footer class="footer-format">
+        <small>&copy;Guimba - 2022</small>
+    </footer>
+
 </body>

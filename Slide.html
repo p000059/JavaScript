@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery Slide</title>
+        <script src="js/jquery-3.6.1.js"></script>
+        <script>
+
+            $(document).ready(function(){
+
+                $(".hhide").click(function(){
+                    $(".mensage").slideUp(2000);
+                });
+                $(".show").click(function(){
+                    $(".mensage").slideDown(2000);
+                });
+
+            });
+
+        </script>
+        <link type="text/css" rel="stylesheet" href="css/custom.css">
+        <link type="image/x-icon" rel="shortcut icon" href="img/82IT.ico">
+    </head>
+    <body>
+        <header class="header-format">
+            jQuery Slide
+        </header>
+        <main>
+            <h1 class="show">Mostrar</button>
+            <h1 class="hhide">Ocultar</button>
+            <h1 class="mensage">jQuery Slide</h1>
+        </main>
+        <footer class="footer-format">
+            <small>&copy;Guimba - 2022</small>
+        </footer>
+    </body>
+</html>
