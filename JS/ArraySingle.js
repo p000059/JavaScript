@@ -1,51 +1,48 @@
-let arrayVariable = [];
-
-function showArray() {
-
-    document.getElementById('idTable').innerHTML = addArray();
-}
-
-function createDiv() {
-
-    let divCol = document.getElementById('divForm');
-    let div = document.createElement('div');
-    div.className = "input-group bt-2 mt-2";
-
-    let span = document.createElement('span');
-    span.className = "input-group-text";
-    span.innerHTML = "Variable";
-
-    let input = document.createElement('input');
-    input.className = "form-control";
-    input.type = "text";
-    input.id = "variable" + 1;
-    input.placeholder = "Digite uma Variavel";
-
-    div.appendChild(span);
-    div.appendChild(input);
-    divCol.appendChild(div);
-}
-
-function returnCount() {
-    let i = 0;
-    i + 1;
-    return i;
-}
+let arrayData = new Array();
+let objData = new Object();
 
 function registerArray() {
 
-    let variableText = document.getElementById('variableOne').value;
-    addArray(variableText);
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+
+    objData.name = name.toLowerCase();
+    objData.email = email.toLowerCase();
+    objData.password = password;
+
+    arrayData.push(objData);
+
+    console.log(objData);
+    console.log(objData.name);
+    console.log(objData.email);
+    console.log(objData.password);
 }
 
-function addArray(dataValue) {
+function showArray() {
 
-    arrayVariable.push(dataValue);
+    
+    let section = document.getElementById('idTable');
+    let table = document.createElement('table');
+    let thead = document.createElement('tbody');
+    let tr = document.createElement('tr');
 
-    return arrayVariable;
+    for(i in objData){
+
+        let td = document.createElement('td');
+        td.innerHTML = objData[i];
+        tr.appendChild(td);
+    }
+
+    thead.appendChild(tr);
+    table.className = "form-table";
+    table.appendChild(thead);
+    section.appendChild(table);    
 }
 
 function clearFields() {
 
-    document.getElementById('variableOne').value = "";
+    document.getElementById('name').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('password').value = "";
 }
