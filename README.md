@@ -28,6 +28,26 @@
               <td>Create files css</td>
               <td>sass --watch myDirectory/myFile.scss:css/styles.css</td>
             </tr>
+            <tr>
+              <td>Create Package Express</td>
+              <td>npm init</td>
+            </tr>
+            <tr>
+              <td>Create Json</td>
+              <td>npm install</td>
+            </tr>
+            <tr>
+                <td>Install npm Express</td>
+                <td>npm install express</td>
+            </tr>
+            <tr>
+                <td>Install utilization view : EJS</td>
+                <td>npm install i ejs</td>
+            </tr>
+            <tr>
+                <td>Execute Project</td>
+                <td>node index</td>
+            </td>
         </table>
     </div>
 <body>

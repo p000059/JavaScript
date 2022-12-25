@@ -1,19 +1,39 @@
-.buttons {
-  border-radius: 3px;
+.labels {
+  border-radius: 5px;
   border-width: 1px;
   letter-spacing: 1px;
-  text-align: center;
   text-justify: inherit;
-  padding: 4px;
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 2px 2px 2px 2px;
+  text-align: left;
+  padding: 4px 10px 4px 10px;
   text-transform: capitalize;
 }
 
+.buttons {
+  border-radius: 5px;
+  border-width: 1px;
+  letter-spacing: 1px;
+  text-justify: inherit;
+  margin: 2px 2px 2px 2px;
+  padding: 4px 20px 4px 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.inputs {
+  border-radius: 5px;
+  border-width: 1px;
+  letter-spacing: 1px;
+  text-justify: inherit;
+  margin: 2px 2px 2px 2px;
+  text-align: left;
+  padding: 4px 10px 4px 10px;
+  text-transform: none;
+}
+
 .btn-danger {
-  border-color: rgb(235, 34, 34);
-  background-color: rgb(235, 34, 34);
+  border-color: rgb(233, 78, 78);
+  background-color: rgb(233, 78, 78);
   color: #ecedee;
 }
 
@@ -24,20 +44,20 @@
 }
 
 .btn-success {
-  border-color: rgb(63, 209, 112);
-  background-color: rgb(63, 209, 112);
+  border-color: rgb(106, 204, 140);
+  background-color: rgb(106, 204, 140);
   color: #ecedee;
 }
 
 .btn-green {
-  border-color: rgb(5, 202, 169);
-  background-color: rgb(5, 202, 169);
+  border-color: rgb(71, 197, 176);
+  background-color: rgb(71, 197, 176);
   color: #ecedee;
 }
 
 .btn-warning {
-  border-color: rgb(212, 210, 74);
-  background-color: rgb(212, 210, 74);
+  border-color: rgb(226, 224, 109);
+  background-color: rgb(226, 224, 109);
   color: #ecedee;
 }
 

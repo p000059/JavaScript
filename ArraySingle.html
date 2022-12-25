@@ -11,38 +11,31 @@
     <title>Show Array Sample</title>
     <script src="js/ArraySingle.js"></script>
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/ArraySingle.css">
+    <link rel="stylesheet" href="css/array-single.css">
+    <link rel="stylesheet" href="css/Buttons.css">
     <link rel="shortcut icon" href="img/82IT.ico">
 </head>
 
 <body>
 
-    <header class="header-format">
-        Cadastra Array e Mostra Resultado
+    <header>
+        Array Single
     </header>
     <main>
-        <form class="box">
-            <section>
-                <H3>Registro de Usuário</H3>
-                <div>
-                    <label>Nome:</label>
-                    <input type="text" id="name">
-                </div>
-                <div>
-                    <label>Email:</label>
-                    <input type="email" id="email">
-                </div>
-                <div>
-                    <label>Password:</label>
-                    <input type="password" id="password">
-                </div>
-                <button type="button" class="buttonForm" onclick="registerArray()">Salvar</button>
-                <button type="button" class="buttonForm" onclick="showArray()">Mostrar</button>
-                <button type="button" class="buttonForm" onclick="clearFields()">Limpar</button>
-            </section>
-            <section id="idTable">
-            </section>
-        </form>
+        <section>
+            <article>
+                <section>
+                    <div>
+                        <H3>user register</H3>
+                        <input placeholder="Digite o email" class="col-80 inputs" type="email" id="email">
+                        <input type="password" id="email" name="lastname" placeholder="Digite a senha..">
+                        <input type="submit" value="Entrar" class="buttons btn-success" onclick="registerArray()">
+                        <input type="submit" value="Mostrar" class="buttons btn-info" onclick="showArray()">
+                        <input type="submit" value="Limpar" class="buttons btn-clear" onclick="clearFields()">
+                    </div>
+                </section>
+            </article>
+        </section>
     </main>
     <footer class="footer-format">
         <small>&copy;Guimba - 2022</small>
