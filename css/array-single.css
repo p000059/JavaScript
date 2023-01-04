@@ -15,7 +15,10 @@ input[type=email], [type=password] {
   box-sizing: border-box;
 }
 
-div {
+section {
+  margin: auto 30% auto 30%;
+  margin-top: 5%;
+  width: auto;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
