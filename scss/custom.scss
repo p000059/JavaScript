@@ -11,6 +11,7 @@ $colors-background: (
 }
 
 body {
+    box-sizing: border-box;
     font-style: normal;
     margin: 0px;
     padding: 0px;
@@ -40,7 +41,7 @@ header {
 }
 
 main {
-    padding: 10px;
+    padding: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
     width: 100%;
