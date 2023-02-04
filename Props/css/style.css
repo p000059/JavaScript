@@ -1,0 +1,11 @@
+form {
+    padding: 5px;
+    position: relative;
+    text-align: center;
+}
+
+input {
+    padding: 3px;
+    margin: 3px;
+}
+

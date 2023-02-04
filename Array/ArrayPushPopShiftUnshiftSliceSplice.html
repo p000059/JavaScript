@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Push Pop Shift UnShift Slice Splice</title>    
+    <link rel="shortcut icon" href="../img/82IT.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="css/array-single.css">
+</head>
+<body>
+    <header>
+        Array Push Pop Shift UnShift Slice Splice
+    </header>
+    <main>
+        <section class="content-array">
+            <article>
+                <button type="button" class="buttons btn-info" onclick="showPush()">Push</button>
+                <input type="text" class="inputs" id="push" >
+            </article>
+            <article>
+                <button type="button" class="buttons btn-info" onclick="showPop()">Pop</button>
+                <input type="text" class="inputs" id="pop" >
+            </article>
+            <article>
+                <button type="button" class="buttons btn-info" onclick="showShift()">Shift</button>
+                <input type="text" class="inputs" id="shift" >
+            </article>
+            <article>
+                <button type="button" class="buttons btn-info" onclick="showUnShift()">UnShift</button>
+                <input type="text" class="inputs" id="unShift" >
+            </article>
+            <article>
+                <div>
+                    <input placeholder="Initial index" type="text" id="initialNumber" class="labels">
+                    <button type="button" class="buttons btn-info" onclick="showSlice()">Slice</button>
+                </div>
+                <div>
+                    <input placeholder="Final index" type="text" id="finalNumber" class="labels">
+                    <input type="text" class="inputs" id="slice" >
+                </div>
+            </article>
+            <article>
+                <button type="button" class="buttons btn-info" onclick="showSplice()">Splice</button>
+                <input type="text" class="inputs" id="splice" >
+            </article>
+        </section>
+    </main>
+    <footer>
+        <small>&copy;Guimba - <span id="footerYear"></span></small>
+    </footer>
+    <script src="js/ArrayPushPopShiftUnShiftSliceSplice.js"></script>
+</body>
+</html>

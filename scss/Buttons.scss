@@ -1,16 +1,16 @@
 @use "sass:map";
 
-$theme-colors: (
-    "success":rgb(106, 204, 140),
-    "info":rgb(98, 153, 190),
-    "warning":rgb(226, 224, 109),
-    "danger":rgb(233, 78, 78),
-    "green":rgb(71, 197, 176),
-    "neutral":rgb(182, 182, 182),
-    "clear":rgb(233, 233, 233),
-    "default-button-color": #ecedee,
-    "color-clear": #838383,
-    "background-page": rgb(255,255,255)
+$colors-elements: (
+    clear-text: rgb(228, 226, 226),
+    gray-text: rgb(131, 131, 131),
+    btn-green: rgb(124, 190, 178),
+    btn-danger: rgb(255, 83, 83),
+    btn-success: rgb(122, 189, 144),
+    btn-info: rgb(115, 153, 179),
+    btn-warning: rgb(190, 179, 81),
+    btn-neutral: rgb(182, 182, 182),
+    btn-neutral-clear: rgb(214, 213, 213),
+    background-default:  rgb(238, 236, 236)
 );
 
 @mixin btn-input() {
@@ -47,43 +47,43 @@ $theme-colors: (
 }
 
 .btn-danger {
-    border-color: map-get($theme-colors, "danger");
-    background-color: map-get($theme-colors, "danger");
-    color: map-get($theme-colors, "default-button-color");
+    border-color: map-get($colors-elements, btn-danger);
+    background-color: map-get($colors-elements, btn-danger);
+    color: map-get($colors-elements, background-default);
 }
 
 .btn-info {
-    border-color: map-get($theme-colors, "info");
-    background-color: map-get($theme-colors, "info");
-    color: map-get($theme-colors, "default-button-color");
+    border-color: map-get($colors-elements, btn-info);
+    background-color: map-get($colors-elements, btn-info);
+    color: map-get($colors-elements, background-default);
 }
 
 .btn-success {
-    border-color: map-get($theme-colors, "success");
-    background-color: map-get($theme-colors, "success");
-    color: map-get($theme-colors, "default-button-color");
+    border-color: map-get($colors-elements, btn-success);
+    background-color: map-get($colors-elements, btn-success);
+    color: map-get($colors-elements, background-default);
 }
 
 .btn-green {
-    border-color: map-get($theme-colors, "green");
-    background-color: map-get($theme-colors, "green");
-    color: map-get($theme-colors, "default-button-color");
+    border-color: map-get($colors-elements, btn-green);
+    background-color: map-get($colors-elements, btn-green);
+    color: map-get($colors-elements, background-default);
 }
 
 .btn-warning {
-    border-color: map-get($theme-colors, "warning");
-    background-color: map-get($theme-colors, "warning");
-    color: map-get($theme-colors, "default-button-color");
+    border-color: map-get($colors-elements, btn-warning);
+    background-color: map-get($colors-elements, btn-warning);
+    color: map-get($colors-elements, background-default);
 }
 
 .btn-neutral {
-    border-color: map-get($theme-colors, "neutral");
-    background-color: map-get($theme-colors, "neutral");
-    color: map-get($theme-colors, "default-button-color");
+    border-color: map-get($colors-elements, btn-neutral);
+    background-color: map-get($colors-elements, btn-neutral);
+    color: map-get($colors-elements, background-default);
 }
 
 .btn-neutral-clear {
-    border-color: map-get($theme-colors, "clear");
-    background-color: map-get($theme-colors, "clear");
-    color: map-get($theme-colors, "color-clear");
+    border-color: map-get($colors-elements, btn-neutral-clear);
+    background-color: map-get($colors-elements, btn-neutral-clear);
+    color: map-get($colors-elements, gray-text);
 }
