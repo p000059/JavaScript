@@ -22,7 +22,6 @@ function updateNameAction(varName) {
 }
 
 function deleteName() {
-    let vaName = document.getElementById('name').innerHTML;
     document.getElementById('textDOM').value = "";
 }
 

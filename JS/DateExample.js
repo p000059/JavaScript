@@ -1,3 +1,7 @@
+(function(){
+    showYear()
+})()
+
 let date = new Date()
 
 function showYear(){
