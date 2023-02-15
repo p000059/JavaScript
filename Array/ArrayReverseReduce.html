@@ -4,31 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Reverse Reduce</title>
+    <title>Array Methods</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="shortcut icon" href="../img/82IT.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="css/array-single.css">
+    <script src="js/ArrayReverseReduce.js" defer></script>
 </head>
 <body>
     <header>
-        Array Reverse Reduce
+        Array Methods
     </header>
     <main>
         <section class="content-array">
             <article>
-                <label id="arrayEven" class="labels"></label>
-                <button type="button" class="buttons btn-info" onclick="showReverse()">Reverse</button>
-                <input type="text" class="inputs" id="reverse" >
+                <button type="button" class="buttons btn-info" id="reverse-array">Reverse</button>
             </article>
             <article>
-                <button type="button" class="buttons btn-info" onclick="showReduce()">Pop</button>
-                <input type="text" class="inputs" id="reduce" >
+                <button type="button" class="buttons btn-info" id="reduce-array">Reduce</button>
             </article>
+            <article>
+                <button type="button" class="buttons btn-info" id="show-array">show array</button>
+            </article>
+            <article>
+                <button type="button" class="buttons btn-info" id="clear-tbody">clear table</button>
+            </article>
+        </section>
+        <section>
+            <div>
+                <table id="table" class="table">
+
+                </table>
+            </div>
         </section>
     </main>
     <footer>
         <small>&copy;Guimba - <span id="footerYear"></span></small>
     </footer>
-    <script src="js/ArrayReverseReduce.js"></script>
 </body>
 </html>

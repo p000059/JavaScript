@@ -8,31 +8,47 @@
     <meta name="keywords"
         content="DOM, document, document.getElementById, getElementById, Basic Javascript, for, Array, innerHTML, .value">
     <meta name="decriptiton" content="Show ArraySample">
-    <title>Show Array Sample</title>
-    <script src="js/ArraySingle.js"></script>
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/array-single.css">
-    <link rel="stylesheet" href="css/Buttons.css">
-    <link rel="shortcut icon" href="img/82IT.ico">
+    <title>Array Single</title>
+    <!-- <script src="js/ArraySingle.js" defer></script> -->
+    <script src="js/RegisterArray.js" defer></script>
+    <script src="js/ReadArray.js" defer></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="shortcut icon" href="../img/82IT.ico" type="image/x-icon">
+    <script src="../js/DateYear.js" defer></script>
+    <script src="json/Content.json" defer></script>
 </head>
 
 <body>
-
     <header>
         Array Single
     </header>
-    <main>
+    <main class="container">
         <section>
-            <H3>user register</H3>
-            <input placeholder="Digite o email" class="col-80 inputs" type="email" id="email">
-            <input type="password" id="email" name="lastname" placeholder="Digite a senha..">
-            <input type="submit" value="Entrar" class="buttons btn-success" onclick="registerArray()">
-            <input type="submit" value="Mostrar" class="buttons btn-info" onclick="showArray()">
-            <input type="submit" value="Limpar" class="buttons btn-clear" onclick="clearFields()">
+            <div class="form-group">
+                <label class="labels">Name:</label>
+                <input placeholder="type your name" class="inputs form-control" type="text" id="name">
+            </div>
+            <div class="form-group">
+                <label class="labels">User:</label>
+                <input placeholder="enter the email" class="inputs form-control" type="email" id="email">
+            </div>
+            <div class="form-group">
+                <label class="labels">Password:</label>
+                <input placeholder="type the password" class="inputs form-control" type="password" id="pwd" >
+            </div>
+            </div>
+            <button type="button" class="buttons btn-success" id="id-register">enter</button>
+            <button type="button" class="buttons btn-info" id="id-show">show</button>
+            <button type="button" class="buttons btn-clear" id="clear">clear fields</button>
+            <button type="button" class="buttons btn-clear" id="neutral-clear">clear table</button>
+        </section>
+        <section id="id_table">
+
         </section>
     </main>
-    <footer class="footer-format">
-        <small>&copy;Guimba - 2022</small>
+    <footer>
+        <small>&copy;Guimba - <span id="year"></span></small>
     </footer>
 
 </body>

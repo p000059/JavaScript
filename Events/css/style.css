@@ -1,11 +1,12 @@
 h3 {
-    text-align: center;
-    text-shadow: 1px rgb(37, 37, 37);
-    color: rgb(97, 92, 92);
-    text-transform: capitalize;
+  text-align: center;
+  text-shadow: 1px rgb(37, 37, 37);
+  color: rgb(97, 92, 92);
+  text-transform: capitalize;
 }
 
-input[type=email], [type=password] {
+input[type=email],
+[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -25,6 +26,12 @@ section {
 }
 
 .content-array {
+  padding: 5px;
+  position: relative;
+  text-align: center;
+}
+
+.container2 {
   padding: 5px;
   position: relative;
   text-align: center;
