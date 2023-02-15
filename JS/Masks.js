@@ -159,3 +159,29 @@ function showTable() {
 
     table.appendChild(tbody);
 }
+
+function maskFoneInput(fone) {
+
+    parseInt(fone)
+
+    if (fone.length === 11) {
+
+        fone = fone.replace(/D/g, ""); //Remove tudo o que não é dígito
+        fone = fone.replace(/(\d{2})?(\d{5})?(\d{4})/, "($1)$2-$3");
+
+    } else if (fone.length !== 10) {
+
+        fone = fone.replace(/D/g, ""); //Remove tudo o que não é dígito
+        fone = fone.replace(/(\d{2})?(\d{4})?(\d{4})/, "($1)$2-$3");
+    }
+
+    return fone;
+}
+
+function maskCPFinput(cpf) {
+
+    cpf = cpf.replace(/\D/g, "")
+    cpf = cpf.replace(/(\d{3})?(\d{3})?(\d{3})?(\d{2})/, "$1.$2.$3-$4");
+
+    return cpf;
+}

@@ -1,13 +1,19 @@
-//Este programa utiliza uma forma de somar os elementos de um Array utilizando uma função externa para isso.
+const data = [
+    { name: "Marcelo", age: '40', sallary: 2000, driverLicense: true },
+    { name: "Mauricio", age: '41', sallary: 2300, driverLicense: true },
+    { name: "Ruth", age: '35', sallary: 2500, driverLicense: true },
+    { name: "Lucas", age: '28', sallary: 2700, driverLicense: false },
+    { name: "Gabriela", age: '35', sallary: 3000, driverLicense: false }
+]
 
-var numeros = [0,1,2,3,4,5,6,7,8,9,10]
-let total = 0;
+const files = [
+    "Marcelo", "Ruth", "Lucas", "Mauricio", "Gabriela"
+]
 
-function soma(item){
-    total = total + item;
-    //console.log(total);
-    return total;
-}
+let filesForEach = files.forEach((element) => element.toUpperCase())
 
-numeros.forEach(soma)
+console.log(filesForEach)
 
+let filesMap = files.map((element) => element.toUpperCase())
+
+console.log(filesMap)
