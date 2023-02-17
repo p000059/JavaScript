@@ -1,4 +1,16 @@
+const method = "POST"
+const link = "json/Content.json"
+const xhttp = new XMLHttpRequest()
+xhttp.open(method, link, true)
+xhttp.send()
+var response = ''
 
+function showJSON() {
+    if (xhttp.readyState === 4 && xhttp.status === 200) {
+        response = JSON.parse(xhttp.responseText)
+        
+    }
+}
 
 const id_register = document.getElementById('id-register')
 id_register.addEventListener('click', () => registerArray())

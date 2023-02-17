@@ -1,36 +1,18 @@
-function loadDoc() {
-    const xhttp = new XMLHttpRequest()
-    let arrayData = ''
-    let stringJSON = ''
-    xhttp.onload = function () {
-        if(this.readyState == 4 && this.status ==200){
-            stringJSON = xhttp.responseText
-            arrayData = JSON.parse(stringJSON)
-            showJSON(arrayData)
-        }
-    }
-    xhttp.open("GET", "json/Content.json", true)
-    xhttp.send()
-}
+const method = "GET"
+const link = "json/Content.json"
+const xhttp = new XMLHttpRequest()
+xhttp.open(method, link, true)
+xhttp.send()
+var response = ''
 
 const id_show = document.getElementById('id-show')
-id_show.addEventListener('click', () => showJSON())
+id_show.addEventListener('click', () => {clearTable(), showJSON()} )
 
-function showJSON(object){
-    document.getElementById("id_table").innerHTML = object.status
-}
-
-/* const show = document.getElementById('id-show')
-show.addEventListener('click', () => {
-    clearTable(),
+function showJSON() {
+    if (xhttp.readyState === 4 && xhttp.status === 200) {
+        response = JSON.parse(xhttp.responseText)
         showTable()
-})
- 
-
-function clearTable() {
-    let id_table = document.getElementById('id_table')
-    id_table.innerHTML = ''
-    return id_table
+    }
 }
 
 function showTable() {
@@ -46,10 +28,12 @@ function showTable() {
 function createThead() {
     let thead = document.createElement('thead')
     let tr = document.createElement('tr')
+    let key = Object.keys(response[0])
     
-    for (let i in registerArray()) {
+    for (let i in key) {
         let th = document.createElement('th')
-        th.innerHTML = i.toUpperCase()
+        th.className = 'text-table'
+        th.innerHTML = key[i]
         tr.appendChild(th)
     }
 
@@ -60,7 +44,7 @@ function createThead() {
 function createTbody() {
     let tbody = document.createElement('tbody');
 
-    arrayData.forEach(show)
+    response.forEach(show)
 
     function show(object) {
         let tr = document.createElement('tr');
@@ -76,4 +60,9 @@ function createTbody() {
 
     return tbody
 }
-*/
+
+function clearTable() {
+    let id_table = document.getElementById('id_table')
+    id_table.innerHTML = ''
+    return id_table
+}
