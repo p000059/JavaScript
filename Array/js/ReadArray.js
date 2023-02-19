@@ -1,16 +1,16 @@
-const method = "GET"
-const link = "json/Content.json"
-const xhttp = new XMLHttpRequest()
-xhttp.open(method, link, true)
-xhttp.send()
+const methodType = "GET"
+const linkFile = "json/Content.json"
+var xhr = new XMLHttpRequest()
+xhr.open(methodType, linkFile, true)
+xhr.send()
 var response = ''
 
 const id_show = document.getElementById('id-show')
 id_show.addEventListener('click', () => {clearTable(), showJSON()} )
 
 function showJSON() {
-    if (xhttp.readyState === 4 && xhttp.status === 200) {
-        response = JSON.parse(xhttp.responseText)
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        response = JSON.parse(xhr.responseText)
         showTable()
     }
 }

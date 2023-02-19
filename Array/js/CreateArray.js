@@ -1,21 +1,10 @@
-const method = "POST"
-const link = "json/Content.json"
-const xhttp = new XMLHttpRequest()
-xhttp.open(method, link, true)
-xhttp.send()
-var response = ''
 
-function showJSON() {
-    if (xhttp.readyState === 4 && xhttp.status === 200) {
-        response = JSON.parse(xhttp.responseText)
-        
-    }
-}
+let arrayData = new Array();
+let jsonObj = {"name":"Marcelo","email":"marcelo.guimba@gmail.com","password":"dxdiag"}
+localStorage.setItem('jsonObj', JSON.stringify(jsonObj))
 
 const id_register = document.getElementById('id-register')
 id_register.addEventListener('click', () => registerArray())
-
-let arrayData = new Array();
 
 function registerArray() {    
     valuesObject = insertValues()
