@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="../img/82IT.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="css/array-single.css">
+    <script src="../js/DateYear.js" defer></script>
+    <script src="js/ArrayIndex.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,11 +22,17 @@
             <article>
                 <div>
                     <div>
-                        <label></label>
+                        <label id="array-users"></label>
                     </div>
+                </div>
+                <div>
                     <div>
-                        <button id="btn-indexOf" class="buttons btn-info" onclick="showIndexOf()">Show IndexOf</button>
-                        <input class="inputs" type="text" id="indexOf" />
+                        <label id="array-even"></label>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label id="array-odd"></label>
                     </div>
                 </div>
                 <div>
@@ -32,8 +40,8 @@
                         <label></label>
                     </div>
                     <div>
-                        <button id="btn-lastIndexOf" class="buttons btn-info" onclick="showLastIndexOf()">Show LastIndexOf</button>
-                        <input class="inputs" type="text" id="lastIndexOf" />
+                        <button id="btn-at" class="buttons btn-info">Show function users.at(1): </button>
+                        <input class="inputs" type="text" id="array-at" />
                     </div>
                 </div>
                 <div>
@@ -41,8 +49,8 @@
                         <label></label>
                     </div>
                     <div>
-                        <button id="btn-includes" class="buttons btn-info" onclick="showIncludes()">Show Include</button>
-                        <input class="inputs" type="text" id="includes" />
+                        <button id="btn-push" class="buttons btn-info">Add user in users: </button>
+                        <input class="inputs" type="text" id="array-push" />
                     </div>
                 </div>
                 <div>
@@ -50,8 +58,17 @@
                         <label></label>
                     </div>
                     <div>
-                        <button id="btn-findObject" class="buttons btn-info" onclick="findObject()">Show Find</button>
-                        <input class="inputs" type="text" id="findObject" />
+                        <button id="btn-remove-last-element" class="buttons btn-info">Remove last element: array.pop()</button>
+                        <input class="inputs" type="text" id="remove-last-element" />
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label></label>
+                    </div>
+                    <div>
+                        <button id="btn-get-last-element" class="buttons btn-info">Get last Element: users.at(-1)</button>
+                        <input class="inputs" type="text" id="get-last-element" />
                     </div>
                 </div>
                 <div>
@@ -67,8 +84,7 @@
         </section>
     </main>
     <footer>
-        <small>&copy;Guimba - <span id="footerYear"></span></small>
+        <small>&copy;Guimba - <span id="year"></span></small>
     </footer>
-    <script src="js/ArrayIndex.js"></script>
 </body>
 </html>

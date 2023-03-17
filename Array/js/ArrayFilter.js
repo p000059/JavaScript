@@ -1,32 +1,46 @@
-(function () {
-    let dateYear = new Date()
-    let year = dateYear.getFullYear()
-    document.getElementById('footerYear').innerHTML = year
-})()
+const arr = [1, 5, 10, 20, 37, "hello",'friend', true]
 
-const arr = [1, 5, 10, 20, 37, "hello", true]
+document.querySelector('#array-js').innerHTML = `Array [ ${arr} ]`
 
-document.getElementById('input-foreach').value = arr
+let btnFilter = document.querySelector('#btn-filter')
+btnFilter.addEventListener('click', () => showFilter())
+
+let btnFilterString = document.querySelector('#btn-filter-string')
+btnFilterString.addEventListener('click', () => showString())
+
+function showString() {
+    console.clear()
+    clearTable()
+    const array = arr.filter((element, index, array) => {
+        if(typeof element === 'string'){
+            console.log(`Index: ${index} | Value: ${element} | Array: ${array[index]}`)
+            return typeof element === 'string'
+        } else {
+            console.log(`Index: ${index} | Value: ${element} | Array: ${array[index]}`)
+            return null
+        }
+    })
+    console.log(`${array}`)
+    createTable(array)
+    return array
+}
 
 function showFilter() {
     console.clear()
-    const array1 = arr.filter(function (el, i, array) {
-        console.log(`Index: ${i}  |  Value: ${el}`)
-        return typeof el === 'number'
+    clearTable()
+    const array = arr.filter((element, index, array) => {
+        console.log(`Index: ${index}  |  Value: ${element} | ${array[index]}`)
+        return typeof element === 'number'
     })
 
-    createTable(array1)
-
-    document.getElementById('input-foreach').value = array1
-    console.log(`Array Full: ${arr}`)
-    console.log(`Only Numbers: ${array1}`)
-
-    return array1
+    createTable(array)
+    return array
 }
 
 function createTable(array) {
     let div = document.getElementById('tableArray')
     let table = document.createElement('table')
+    let tbody = document.createElement('tbody')
     let tr = document.createElement('tr')
 
     array.forEach(element => {
@@ -35,7 +49,13 @@ function createTable(array) {
         tr.appendChild(td)
     });
 
-    table.appendChild(tr)
+    tbody.appendChild(tr)
+    table.appendChild(tbody)
+    table.className = 'tables'
     div.appendChild(table)
+}
+
+function clearTable() {
+    document.querySelector('#tableArray').innerHTML = ''
 }
 

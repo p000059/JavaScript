@@ -53,27 +53,37 @@ function createThead() {
 }
 
 function createTbody() {
-    let tbody = document.createElement('tbody');
+    let tbody = document.createElement('tbody')
 
     arrayData.forEach(show)
 
     function show(object) {
-        let tr = document.createElement('tr');
+        let tr = document.createElement('tr')
 
         for (i in object) {
-            let td = document.createElement('td');
-            td.innerHTML = object[i];
-            tr.appendChild(td);
+            let td = document.createElement('td')
+            td.innerHTML = object[i]
+            tr.appendChild(td)
         }
 
-        tbody.appendChild(tr);
+        tbody.appendChild(tr)
     }
 
     return tbody
 }
 
+let clear_table = document.getElementById('clear-table')
+clear_table.addEventListener('click', () => clearTable())
+
 function clearTable() {
-    let id_table = document.getElementById('id_table')
     id_table.innerHTML = ''
-    return id_table
+}
+
+let clear = document.getElementById('clear')
+clear.addEventListener('click', () => clearFields())
+
+function clearFields() {
+    document.getElementById('name').value = ''
+    document.getElementById('email').value = ''
+    document.getElementById('pwd').value = ''
 }

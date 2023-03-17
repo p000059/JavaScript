@@ -8,6 +8,8 @@
         <link rel="shortcut icon" href="../img/82IT.ico" type="image/x-icon">
         <link rel="stylesheet" href="../css/custom.css">
         <link rel="stylesheet" href="css/array-single.css">
+        <script src="js/ArrayFilter.js" defer></script>
+        <script src="../js/DateYear.js" defer></script>
     </head>
 </head>
 <body>
@@ -17,19 +19,21 @@
     <main>
         <section class="content-array">
             <article>
-                <input type="text" id="input-foreach" class="inputs" />
-                <button id="btn-foreach" class="buttons btn-info" onclick="showFilter()">Show Numbers</button>
+                <div>
+                    <label type="text" class="labels" id="array-js"></label>
+                </div>
+                <div>
+                    <button id="btn-filter" class="buttons btn-info">Show Numbers</button>
+                    <button id="btn-filter-string" class="buttons btn-info">Show Strings</button>
+                </div>
             </article>
             <article>
-                <div id="tableArray">
-                    
-                </div>
+                <div id="tableArray"></div>
             </article>
         </section>
     </main>
     <footer>
-        <small>&copy;Guimba - <span id="footerYear"></span></small>
+        <small>&copy;Guimba - <span id="year"></span></small>
     </footer>
-    <script src="js/ArrayFilter.js"></script>
 </body>
 </html>

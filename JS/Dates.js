@@ -8,7 +8,7 @@ function addZero(numero){
 (function(){
     let date = new Date()
     let smallDate = (addZero(date.getDate().toString()) + "/" + (addZero(date.getMonth()+1).toString()) + "/" + date.getFullYear());
-    document.getElementById('year').innerHTML = smallDate
+    document.querySelector('#year').innerHTML = smallDate
 })()
 
 let date = new Date()

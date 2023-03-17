@@ -1,4 +1,10 @@
 [
-    {"name":"Marcelo Guimarães","email":"marcelo.acad@gmail.com","password":"Dhgx4UHz@vNLQV"},
-    {"name":"Lucas","email":"lucas.lima@gmail.com","password":"Dhgx4UHz@vNLQV"}
+    {"categoria":"sistemas operacionais","projetos e scripts":[],"curso":[{"name":"Linux Debian","link":[]},{"name:":"Linux Ubuntu","link":[]},{"name":"Oracle Linux","link":[]},{"name":"Microsoft Windows","link":[]}]},
+    {"categoria":"virtualização","projetos e scripts":[],"curso":[{"name":"vmware player","link":[]},{"name":"virtualbox","link":[]}]},
+    {"categoria":"dispositivos de rede","projetos e scripts":[],"curso":[{"name":"roteadores e switches cisco","link":[]},{"name":"","link":[]}]},
+    {"categoria":"banco de dados","projetos e scripts":["https://github.com/p000059/SQL-Scripts"],"curso":[{"name":"MySQL","link":["https://github.com/p000059/SQL-Scripts/tree/master/MySQL"]},{"name":"PostgreSQL","link":["https://github.com/p000059/SQL-Scripts/tree/master/PostgreSQL/PROJECTS"]}]},
+    {"categoria":"programming languages","projetos e scripts":[],"curso":[{"name":"javascript","link":["https://github.com/p000059/JavaScript"]},{"name":"Angular","link":["https://github.com/p000059/Angular"]},{"name":"Java","link":["https://github.com/p000059/Java","https://github.com/p000059/systems"]}]},
+    {"categoria":"Sistemas e Ferramentas","projetos e scripts":[],"curso":[{"name":"Teste de Software","link":[]},{"name":"Versionamento de Software com GIT e GITHUB","link":[]},{"name":"Trello","link":[]}]},
+    {"categoria":"Hardware","projetos e scripts":[],"curso":[{"name":"Montagem e configuração de Microcomputadores","link":[]},{"name":"Técnico em Redes de computadores","link":[]},{"name":"Cabeamento Estruturado de Redes de Computadores","link":[]}]},
+    {"categoria":"outros","projetos e scripts":[],"curso":[{"name":"Empreendedorismo(SEBRAE)","link":[]},{"name":"Gestão Financeira para microempreendedor","link":[]},{"name":"Gestão Administrativa para Micro-Empreendedor","link":[]}]}
 ]

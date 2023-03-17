@@ -1,14 +1,33 @@
-(function () {
-    let dateYear = new Date()
-    let year = dateYear.getFullYear()
-    document.getElementById('footerYear').innerHTML = year
-})()
-
+const users = ['Sam','Alex','Charley','John Connor','James Bond','Clark Kent','Peter Park','Bruce Wayne','Logan','T1000','T800']
 const arrayEvenNumber = [0, 2, 4, 6, 8]
 const arrayOddNumber = [1, 3, 5, 7, 9]
 
-document.getElementById('arrayEvenNumber').value = arrayEvenNumber
-document.getElementById('arrayOddNumber').value = arrayOddNumber
+document.querySelector('#array-users').textContent = `users [ ${users} ]`
+document.querySelector('#array-even').textContent = `even [ ${arrayEvenNumber} ]`
+document.querySelector('#array-odd').textContent = `odd [ ${arrayOddNumber} ]`
+
+const arrayAt = document.querySelector('#btn-at')
+arrayAt.addEventListener('click', function(){
+    document.querySelector('#array-at').value = users.at(1)
+})
+
+const addUser = document.querySelector('#btn-push')
+addUser.addEventListener('click', function(){
+    users.push('Max')
+    document.querySelector('#array-push').value = users
+})
+
+const removeLastElement = document.querySelector('#btn-remove-last-element')
+removeLastElement.addEventListener('click', function(){
+    let lastElement = users.pop()
+    document.querySelector('#remove-last-element').value = lastElement
+})
+
+const getLastElement = document.querySelector('#btn-get-last-element')
+getLastElement.addEventListener('click', function(){
+    let lastElement = users.at(-1)
+    document.querySelector('#get-last-element').value = lastElement
+})
 
 function showIndexOf() {
     let number = document.getElementById('indexOf').value
