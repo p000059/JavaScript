@@ -1,73 +1,47 @@
-(function(){
-    showObject()
-})()
-
 function loadJSON() {
     let objJSON = '[{"name":"Marcelo Guima", "email": "marcelo.acad@gmail.com"},{"name":"Juliana Mello", "email": "julianachaves09@gmail.com"},{"name":"Mauricio Guima", "email": "mauricio.guima@gmail.com"},{"name":"Ruth Guima", "email": "ruth.guima@gmail.com"}]'
-    let obj = JSON.parse(objJSON)
-    
-    return obj;
+    return JSON.parse(objJSON);
 }
 
-function showObject() {
+let createTableTwo = document.querySelector('#create-table')
+createTableTwo.addEventListener('click', () => showTable())
+
+function showTable() {
     let obj = loadJSON()
-
-    let idTable = document.querySelector('#idTable')
+    let div = document.querySelector('#show-table')
     let table = document.createElement('table')
+
+    table.className = 'tables'
+    table.appendChild(createThead(obj))
+    table.appendChild(createTbody(obj))
+    div.appendChild(table)
+}
+
+function createThead(array) {
     let thead = document.createElement('thead')
-    let tbody = document.createElement('tbody')
-    let key = Object.keys(obj[0])
-
-    function showThead(){
-        let tr = document.createElement('tr')
-        for(let i in key){
-            let th = document.createElement('th')
-            th.innerHTML = key[i]
-            tr.appendChild(th)
-        }
-        thead.className = 'thead-tables'
-        thead.appendChild(tr)
+    let key = Object.keys(array[0])
+    let tr = document.createElement('tr')
+    for (let i in key) {
+        let th = document.createElement('th')
+        th.innerHTML = key[i]
+        tr.appendChild(th)
     }
+    thead.appendChild(tr)
+    return thead
+}
 
-    showThead()
-
-    obj.forEach(showTbody)
-
-    function showTbody(obj){
+function createTbody(array) {
+    let tbody = document.createElement('tbody')
+    array.forEach(showTbody)
+    function showTbody(elements) {
         let tr = document.createElement('tr')
-        for (let i in obj) { 
+        for (let i in elements) {
             let td = document.createElement('td')
-            td.innerHTML = obj[i]
+            td.innerHTML = elements[i]
             tr.appendChild(td)
         }
         tbody.appendChild(tr)
     }
-
-    table.className = "tables"
-    table.appendChild(thead)
-    table.appendChild(tbody)
-    idTable.appendChild(table)
-}
-
-function createTbody(obj) {
-
-    let tbody = document.createElement('tbody');
-
-    obj.forEach(increment);
-
-    function increment(element) {
-
-        let tr = document.createElement('tr');
-
-        for (let i in element) {
-
-            let td = document.createElement('td');
-            td.innerHTML = element[i];
-            tr.appendChild(td);
-        }
-
-        tbody.appendChild(tr);
-    }
-
-    return tbody;
+    console.log(tbody)
+    return tbody
 }

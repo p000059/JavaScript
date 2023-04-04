@@ -11,7 +11,7 @@ filterNumbers.addEventListener('click', () => showFilterNumbers())
 
 function showName () {
     let findWord = document.querySelector('#name').value
-    let result = names.find((name) => name === findWord)
+    let result = names.prototype.find((name) => name === findWord)
     document.querySelector('#result-name').innerHTML = `Found: ${result}`
     console.log(result)
 }

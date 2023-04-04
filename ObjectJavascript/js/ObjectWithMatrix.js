@@ -1,7 +1,7 @@
 (function(){
     
-    let person1 = {firstName:"John", lastName:"Doe", age:46};
-    showPerson1(person1);
+    let personOne = {firstName:"John", lastName:"Doe", age:46};
+    showPersonOneValue(personOne);
 
     let person2 = [{name: "Marcelo", email: "marcelo.acad@gmail.com"},{name: "Juliana", email: "juliana.melo@gmail.com"}];
     showPerson2(person2);
@@ -11,8 +11,7 @@
     
 })()
 
-function showPerson1(obj){
-    
+function showPersonOneValue(obj){
     let person1 = document.querySelector('#person1');
     let table = document.createElement('table');
     let tr = document.createElement('tr');
@@ -27,6 +26,13 @@ function showPerson1(obj){
     table.className = "tables";
     table.appendChild(tr);
     person1.appendChild(table);
+}
+
+function showPersonOneIndexValue(object){
+    let person = document.querySelector('#person-one-index-value')
+    let table = document.createElement('table')
+
+    
 }
 
 function showPerson2(obj){

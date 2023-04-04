@@ -81,9 +81,6 @@ function clearFields() {
     document.getElementById('variableOne').value = ''
 }
 
-var buttons = document.querySelectorAll('.button')
-buttons.addEventListener('click', addButton)
-
 function delButton() {
     console.log('button-del')
 }
