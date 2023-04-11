@@ -6,7 +6,11 @@ function loadJSON() {
 let createTableTwo = document.querySelector('#create-table')
 createTableTwo.addEventListener('click', () => showTable())
 
+let clearTable = document.querySelector('#clear-table')
+clearTable.addEventListener('click', () => clearTableFunc())
+
 function showTable() {
+    clearTableFunc()
     let obj = loadJSON()
     let div = document.querySelector('#show-table')
     let table = document.createElement('table')
@@ -44,4 +48,8 @@ function createTbody(array) {
     }
     console.log(tbody)
     return tbody
+}
+
+function clearTableFunc() {
+    document.querySelector('#show-table').innerHTML = ''
 }
