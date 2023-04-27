@@ -108,7 +108,31 @@ function invertString() {
     result.appendChild(createLabel(resultString))
 }
 
-function vowelCount(){
-    document.querySelector('#result-vowel').innerHTML = ''
-    let 
+function vowelCount() {
+    stringVowel = document.querySelector('#string-vowel').value
+    let result = new Array()
+    let vowel = ['a','e','i','o','u','A','E','I','O','U']
+    let count = 0
+    let resultString = document.querySelector('#string-vowel-count')
+
+    vowel.forEach((index, element) => {
+        if(element === stringVowel){
+            result.push(element)
+        }
+    })
+
+    /* for(let i = 0; i < stringVowel.length; i++){
+        if(vowel.includes(stringVowel[i]))
+        console.log(stringVowel[i])
+        result.push(stringVowel[i])
+    }
+ */
+    /* for (let i = 0; i < stringVowel.length; i++) {
+        for (let j = 0; j < vowel.length; j++) {
+            if (stringVowel[i] === vowel[j]) {
+                result[j] == stringVowel[i]
+            }
+        }
+    } */
+    resultString.appendChild(createLabel(result))
 }
