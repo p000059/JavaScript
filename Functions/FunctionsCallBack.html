@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function CallBack</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/Buttons.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="JS/FunctionsCallBack.js"></script>
+</head>
+
+<body>
+    <header>Function Call Back</header>
+    <main>
+        <section>
+            <div>
+                <input type="text" id="variable" class="inputs" >
+                <button type="button" class="buttons btn-success" onclick="fn(variable.value)">Call Back</button>
+            </div>
+            <div>
+                <label class="labels" id="ltext"></label>
+            </div>
+        </section>
+        <section>
+            <div>
+                <input type="number" id="number" class="inputs">
+                <button type="button" class="buttons btn-info" onclick="receiveNumber()">+</button>
+                <label class="labels" id="lnumber"></label>
+            </div>
+            <div>
+                <button type="button" class="buttons btn-info" onclick="sum()">Sum</button>
+                <label class="labels" id="ltotal"></label>
+            </div>
+        </section>
+    </main>
+    <footer><small>&copy;Guimba - 2022</small></footer>
+</body>
+
+</html>

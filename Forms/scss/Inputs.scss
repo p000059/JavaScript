@@ -1,0 +1,16 @@
+@mixin inputs-struct(){
+    border-radius: 3px;
+    border-width: 1px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-justify: inherit;
+    padding: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 2px 2px 2px 2px;
+}
+
+.inputs {
+    @include inputs-struct();
+    text-transform: none;
+}

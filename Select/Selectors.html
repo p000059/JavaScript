@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery Selectors</title>
+        <script src="js/jquery-3.6.1.js"></script>
+        <script>
+
+           let field = $("input").val();
+           let titleField = $("#Title").html();
+           let subTitle = $(".SubTitle").html();
+
+           console.log(field, titleField, subTitle);
+           alert("hello girts");
+            alert('hello world');
+
+        </script>
+        <link type="text/css" rel="stylesheet" href="css/custom.css">
+        <link type="image/x-icon" rel="shortcut icon" href="img/82IT.ico">
+    </head>
+    <body>
+        <header class="header-format">
+            jQuery Selectors
+        </header>
+        <main>
+            
+           <input type="text" value="Campo Nome" placeholder="Nome">
+           <h1 id="Title">Título em HTML H1</h1>
+           <h2 class="SubTitle">Título em HTML H2</h2> 
+
+        </main>
+        <footer class="footer-format">
+            <small>&copy;Guimba - 2022</small>
+        </footer>
+    </body>
+</html>
