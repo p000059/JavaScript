@@ -9,23 +9,33 @@
     font-weight: 600;
 }
 
-.container {
-    padding-left: 1px;
-    padding-right: 1px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
 .thead-tables {
     text-transform: capitalize;
     font-weight: 600;
 }
 
-div {
-    padding: 10px;
-}
-
 .div-box {
     display: flex;
     justify-content: center;
+}
+
+.background-menu{
+    background-color: rgb(152, 201, 192);
+}
+
+footer {
+    position: fixed;
+    bottom:0;
+    left:0;
+    right: 0;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
 }
