@@ -1,5 +1,17 @@
 [
-    {"name":"Marcelo", "email": "marcelo.acad@gmail.com"},
-    {"name":"Maria", "email": "maria.acad@gmail.com"},
-    {"name":"Joao", "email": "joao.acad@gmail.com"}
+    {
+        "name": "Marcelo",
+        "email": "marcelo.acad@gmail.com",
+        "password": "Marc2023"
+    },
+    {
+        "name": "Maria",
+        "email": "maria.acad@gmail.com",
+        "password": "Mari2023"
+    },
+    {
+        "name": "Joao",
+        "email": "joao.acad@gmail.com",
+        "password": "Joao2023"
+    }
 ]

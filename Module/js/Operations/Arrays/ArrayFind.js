@@ -1,4 +1,7 @@
-let names = ['Marcelo', 'Ruth', 'Mauricio', 10, 37, 48]
+import { createLabel } from '/JavaScript/Module/js/Publics/labels.js'
+
+let names = ['Marcelo', 'Ruth', 'Mauricio', 10, 37, 48, 400, 113, 45, 76]
+document.querySelector('#array').value = `[${names.join(' - ')}]`
 
 let findName = document.querySelector('#find-name')
 findName.addEventListener('click', () => showName())
@@ -10,34 +13,37 @@ let filterNumbers = document.querySelector('#filter-numbers')
 filterNumbers.addEventListener('click', () => showFilterNumbers())
 
 function showName () {
-    let findWord = document.querySelector('#name').value
-    let result = names.prototype.find((name) => name === findWord)
-    document.querySelector('#result-name').innerHTML = `Found: ${result}`
-    console.log(result)
+    exeClearResult()
+    let word = document.querySelector('#word').value
+    let result = names.find((name) => name === word)
+    createLabel(document.querySelector('#result').innerHTML = `Found: ${result}`)
 }
 
 function showFilterNames () {
+    exeClearResult()
     let stringNames = new Array()
-    let resultString = names.filter((name) => {
-        if (typeof name === 'string') {
-            stringNames.push(name)
-            return stringNames
-        }
-    })
-    document.querySelector('#string-names').innerHTML = resultString
+    stringNames = names.filter((name) => typeof name === 'string')
+
+    createLabel(document.querySelector('#result').innerHTML = `Array [${stringNames}]`)
     console.log(stringNames)
 }
 
 function showFilterNumbers(){
+    exeClearResult()
     let stringNumber = new Array()
-    let result = names.filter((number) => {
-        if(typeof number === 'number'){
-            stringNumber.push(number)
-            return stringNumber
-        }
-    })
-    document.querySelector('#numbers-names').innerHTML = result
+    stringNumber = names.filter((number) => typeof number === 'number')
+    createLabel(document.querySelector('#result').innerHTML = `Array [${stringNumber}]`)
     console.log(result)
 }
 
-document.querySelector('#array').innerHTML = `Array [ ${names} ]`
+const clearFields = document.querySelector('#clear-fields')
+clearFields.addEventListener('click', function(){
+    document.querySelector('#word').value = ''
+})
+
+const clearResult = document.querySelector('#clear-result')
+clearResult.addEventListener('click', () => exeClearResult())
+
+function exeClearResult(){
+    document.querySelector('#result').innerHTML = ''
+}

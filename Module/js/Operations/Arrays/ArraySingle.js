@@ -1,16 +1,29 @@
+fetch('/JavaScript/Module/js/json/data.json')
+    .then(response => response.json())
+    .then(data => {
+        accessData(data)
+    })
+
 let arrayData = new Array();
 
-const id_register = document.getElementById('id-register')
-id_register.addEventListener('click', () => registerArray())
+function accessData(array) {
+    array.forEach(element => {
+        console.log(element)
+        document.querySelector('#id_table').innerHTML = array[element]
+    })
+}
 
-function registerArray() {
+const id_register = document.querySelector('#id-register')
+id_register.addEventListener('click', () => accessData())
+
+/* function registerArray() {
     valuesObject = insertValues()
     arrayData.push(valuesObject)
 
     return arrayData
-}
+} */
 
-function insertValues() {
+/* function insertValues() {
     let name = document.getElementById('name').value
     let email = document.getElementById('email').value
     let password = document.getElementById('pwd').value
@@ -21,9 +34,9 @@ function insertValues() {
     objData.password = password
 
     return objData
-}
+} */
 
-const id_show = document.getElementById('id-show')
+/* const id_show = document.getElementById('id-show')
 id_show.addEventListener('click', () => { clearTable(), showTable() })
 
 function showTable() {
@@ -34,9 +47,9 @@ function showTable() {
     table.appendChild(createThead())
     table.appendChild(createTbody())
     id_table.appendChild(table)
-}
+} */
 
-function createThead() {
+/* function createThead() {
     let thead = document.createElement('thead')
     let tr = document.createElement('tr')
     let key = Object.keys(arrayData[0])
@@ -51,8 +64,8 @@ function createThead() {
     thead.appendChild(tr)
     return thead
 }
-
-function createTbody() {
+ */
+/* function createTbody() {
     let tbody = document.createElement('tbody')
 
     arrayData.forEach(show)
@@ -70,9 +83,9 @@ function createTbody() {
     }
 
     return tbody
-}
+} */
 
-let clear_table = document.getElementById('clear-table')
+/* let clear_table = document.getElementById('clear-table')
 clear_table.addEventListener('click', () => clearTable())
 
 function clearTable() {
@@ -86,4 +99,4 @@ function clearFields() {
     document.getElementById('name').value = ''
     document.getElementById('email').value = ''
     document.getElementById('pwd').value = ''
-}
+} */

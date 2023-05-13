@@ -1,16 +1,22 @@
-(function(){
-    let dateFull = new Date()
-    let year = dateFull.getFullYear()
-    document.getElementById('footerYear').innerHTML = year
-})()
+import { createLabel } from '/JavaScript/Module/js/Publics/labels.js'
 
-const arr = [1,5,10,"hello",true]
+const arrayEven = [2,4,6,8,10,12,14,16,18,20]
+const array = [2,4,6,8,10,12,14,16,18,19,20]
+document.querySelector('#array').value = `[${array}]` 
 
-function showArray(){
-    document.getElementById('resultArray').value = arr
-    let number = arr.every( function(el){return typeof el === 'number'})
+const execute = document.querySelector('#execute')
+execute.addEventListener('click', (event)=>showArray(event))
+
+function showArray(event){
+    event.stopPropagation()
+    event.preventDefault()
+    let number = array.every((number)=> number % 2 === 0)
     console.log(number)
     
-    let sum = arr.some(function(el){return typeof el === 'number'})
-    document.getElementById('resultArray').value = sum
+    createLabel(document.querySelector('#result').innerHTML = `Result: ${number}`)
 }
+
+const clearResult = document.querySelector('#clear-result')
+clearResult.addEventListener('click', function(){
+    document.querySelector('#result').innerHTML = ''
+})

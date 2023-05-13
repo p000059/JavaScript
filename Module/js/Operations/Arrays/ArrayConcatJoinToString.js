@@ -1,34 +1,67 @@
-(function () {
-    let dateYear = new Date()
-    let year = dateYear.getFullYear()
-    document.getElementById('footerYear').innerHTML = year
-})()
+import { createLabel } from '/JavaScript/Module/js/Publics/labels.js'
 
 const arrayEven = [0, 2, 4, 6, 8]
 const arrayOdd = [1, 3, 5, 7, 9]
 
-function showToString(){
-    let data = arrayEven
-    console.log(`Value Array Even: ${data}`)
-    document.getElementById('toString').value = data.toString() 
+document.querySelector('#join').value = `[${arrayEven}]`
+document.querySelector('#even').value = `[${arrayEven}]`
+document.querySelector('#odd').value = `[${arrayOdd}]`
+document.querySelector('#copy').value = `Old Array [${arrayOdd}]`
+
+const executeToString = document.querySelector('#execute-to-string')
+executeToString.addEventListener('click', (event) => showToString(event))
+
+function showToString(event) {
+    event.preventDefault()
+    event.stopPropagation()
+    exeClearResult()
+    let number = document.querySelector('#number').value
+    console.log(`Number to Word: ${number}`)
+    createLabel(document.querySelector('#result').innerHTML = `Word to Number: ${number.toString()}`)
 }
 
-function showJoin(){
-    let data = arrayOdd
-    console.log(`Value Array Odd: ${data.join(' -- ')}`)
-    document.getElementById('join').value = data.join(' - ')
+const executeJoin = document.querySelector('#execute-join')
+executeJoin.addEventListener('click', (event) => showJoin(event))
+
+function showJoin(event) {
+    event.preventDefault()
+    event.stopPropagation()
+    exeClearResult()
+    console.log(`Value Array Odd: ${arrayEven.join(' -- ')}`)
+    createLabel(document.querySelector('#result').innerHTML = `[${arrayEven.join(' - ')}]`)
 }
 
-function showConcat(){
-    let data = arrayEven
-    console.log(`Value Array Even: ${data.concat(arrayOdd)}`)
-    document.getElementById('concat').value = data.concat(arrayOdd)
+const concat = document.querySelector('#concat')
+concat.addEventListener('click', (event) => showConcat(event))
+
+function showConcat(event) {
+    event.preventDefault()
+    event.stopPropagation()
+    exeClearResult()
+    console.log(`Value Array Even: ${arrayEven.concat(arrayOdd)}`)
+    createLabel(document.querySelector('#result').innerHTML = `[${arrayEven.concat(arrayOdd)}]`)
 }
 
-function copyArray(){
-    let newArrayEven = [].concat(arrayEven)
-    let newArrayOdd = [].concat(arrayOdd)
+const copyArray = document.querySelector('#copy-array')
+copyArray.addEventListener('click', (event) => showArray(event))
 
-    document.getElementById('copyArrayEven').value = newArrayEven
-    document.getElementById('copyArrayOdd').value = newArrayOdd
+function showArray(event) {
+    event.preventDefault()
+    event.stopPropagation()
+    exeClearResult()
+    let newArray = [].concat(arrayEven)
+
+    createLabel(document.querySelector('#result').innerHTML = `New Array [${newArray}]`)
+}
+
+const clearFields = document.querySelector('#clear-fields')
+clearFields.addEventListener('click', function () {
+    document.querySelector('#number').value = ''
+})
+
+const clearResult = document.querySelector('#clear-result')
+clearResult.addEventListener('click', () => exeClearResult())
+
+function exeClearResult() {
+    document.querySelector('#result').innerHTML = ''
 }

@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Array Filter</title>
-        <link rel="shortcut icon" href="../img/82IT.ico" type="image/x-icon">
-        <link rel="stylesheet" href="../css/custom.css">
-        <link rel="stylesheet" href="css/array-single.css">
-        <script src="js/ArrayFilter.js" defer></script>
-        <script src="../js/DateYear.js" defer></script>
-    </head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Filter</title>
+    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/JavaScript/Module/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
+    <script type="module" src="/JavaScript/Module/js/Operations/Arrays/ArrayFilter.js" defer></script>
 </head>
+</head>
+
 <body>
-    <header>
-        Array Filter
-    </header>
     <main>
-        <section class="content-array">
-            <article>
-                <div>
-                    <label type="text" class="labels" id="array-js"></label>
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Array</span>
+                        </div>
+                        <input id="array-input" class="form-control"></input>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" id="filter-numbers">Show Numbers</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger" id="filter-strings">Show Strings</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger" id="filter-boolean">Show boolean</button>
+                    </div>
                 </div>
-                <div>
-                    <button id="btn-filter" class="buttons btn-info">Show Numbers</button>
-                    <button id="btn-filter-string" class="buttons btn-info">Show Strings</button>
+                <div class="col-sm-4">
+                    <label class="labels" id="result"></label>
                 </div>
-            </article>
-            <article>
-                <div id="tableArray"></div>
-            </article>
-        </section>
+            </div>
+        </form>
     </main>
-    <footer>
-        <small>&copy;Guimba - <span id="year"></span></small>
-    </footer>
 </body>
+
 </html>

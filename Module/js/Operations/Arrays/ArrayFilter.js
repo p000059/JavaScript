@@ -1,16 +1,21 @@
-const arr = [1, 5, 10, 20, 37, "hello",'friend', true]
+import { createLabel } from '/JavaScript/Module/js/Publics/labels.js'
 
-document.querySelector('#array-js').innerHTML = `Array [ ${arr} ]`
+const arr = [1, 5, 10, 20, 37, "hello",'friend', true, false, true, true]
 
-let btnFilter = document.querySelector('#btn-filter')
-btnFilter.addEventListener('click', () => showFilter())
+document.querySelector('#array-input').value = `Array [ ${arr} ]`
 
-let btnFilterString = document.querySelector('#btn-filter-string')
-btnFilterString.addEventListener('click', () => showString())
+let filterNumbers = document.querySelector('#filter-numbers')
+filterNumbers.addEventListener('click', (event) => showNumbers(event))
 
-function showString() {
-    console.clear()
-    clearTable()
+let filterStrings = document.querySelector('#filter-strings')
+filterStrings.addEventListener('click', (event) => showStrings(event))
+
+let filterBoolean = document.querySelector('#filter-boolean')
+filterBoolean.addEventListener('click', (event) => showBooleans(event))
+
+function showStrings (event) {
+    event.preventDefault()
+    event.stopPropagation()
     const array = arr.filter((element, index, array) => {
         if(typeof element === 'string'){
             console.log(`Index: ${index} | Value: ${element} | Array: ${array[index]}`)
@@ -20,42 +25,28 @@ function showString() {
             return null
         }
     })
-    console.log(`${array}`)
-    createTable(array)
+    createLabel(document.querySelector('#result').innerHTML = array)
     return array
 }
 
-function showFilter() {
-    console.clear()
-    clearTable()
+function showNumbers(event) {
+    event.preventDefault()
+    event.stopPropagation()
     const array = arr.filter((element, index, array) => {
         console.log(`Index: ${index}  |  Value: ${element} | ${array[index]}`)
         return typeof element === 'number'
     })
-
-    createTable(array)
+    createLabel(document.querySelector('#result').innerHTML = array)
     return array
 }
 
-function createTable(array) {
-    let div = document.getElementById('tableArray')
-    let table = document.createElement('table')
-    let tbody = document.createElement('tbody')
-    let tr = document.createElement('tr')
-
-    array.forEach(element => {
-        let td = document.createElement('td')
-        td.innerHTML = element
-        tr.appendChild(td)
-    });
-
-    tbody.appendChild(tr)
-    table.appendChild(tbody)
-    table.className = 'tables'
-    div.appendChild(table)
+function showBooleans(event){
+    event.preventDefault()
+    event.stopPropagation()
+    const array = arr.filter((element, index, array) => {
+        console.log(`Index: ${index}  |  Value: ${element} | ${array[index]}`)
+        return typeof element === 'boolean'
+    })
+    createLabel(document.querySelector('#result').innerHTML = array)
+    return array
 }
-
-function clearTable() {
-    document.querySelector('#tableArray').innerHTML = ''
-}
-

@@ -1,4 +1,5 @@
-import { createLabel } from '../PublicFunctions/Labels.js'
+import { createLabel } from '/JavaScript/Module/js/Publics/labels.js'
+/* import { clearFields } from '/JavaScript/Module/js/Publics/clearNumbers.js' */
 
 let array = [15, 113, 300, 89, 47, 200, 2, 1, 12, 26]
 

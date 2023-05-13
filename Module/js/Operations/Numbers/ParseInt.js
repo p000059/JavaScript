@@ -1,4 +1,5 @@
-import { createLabel } from '../PublicFunctions/Labels.js'
+import { createLabel } from '/JavaScript/Module/js/Publics/labels.js'
+/* import { clearFields } from '/JavaScript/Module/js/Publics/clearNumbers.js' */
 
 let execute = document.querySelector('#execute')
 execute.addEventListener('click', (event) => showResult(event))
@@ -11,7 +12,7 @@ function showResult(event) {
     event.stopPropagation()
     document.querySelector('#result').innerHTML = ''
 
-    
+
     let numberOne = Number.parseInt(document.querySelector('#number-one').value)
     let numberTwo = Number.parseInt(document.querySelector('#number-two').value)
 

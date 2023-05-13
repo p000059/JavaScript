@@ -1,5 +1,5 @@
 function showTbody(event, idTbody, array) {
-    
+
     let tbody = document.querySelector(idTbody);
 
     array.forEach(increment);
@@ -20,4 +20,8 @@ function showTbody(event, idTbody, array) {
     event.innerHTML = tbody
 }
 
-export { showTbody }
+function clearTbody(idTbody) {
+    document.querySelector(idTbody).innerHTML = ''
+}
+
+export { showTbody, clearTbody }

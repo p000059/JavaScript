@@ -6,59 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array Foreach</title>
-    <link rel="shortcut icon" href="../img/82IT.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/custom.css">
-    <link rel="stylesheet" href="css/array-single.css">
-    <script src="../js/DateYear.js" defer></script>
-    <script src="./js/ArrayForeach.js" defer></script>
+    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/JavaScript/Module/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
+    <script type="module" src="/JavaScript/Module/js/Operations/Arrays/ArrayForeach.js" defer></script>
 </head>
 
 <body>
-    <header>Array Foreach</header>
-    <main>
-        <section class="content-array">
-            <article>
-                <button class="buttons btn-info" id="show-array">show array</button>
-                <div id="table-foreach"></div>
-            </article>
-            <article>
-                <div>
-                    <button class="buttons btn-info" id="btn-show-array">Show Array Foreach</button>
-                    <div id="show-array-foreach"></div>
+    <form>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Array</span>
+                    </div>
+                    <input id="array" class="form-control"></input>
                 </div>
-            </article>
-            <article>
-                <div>
-                    <button class="buttons btn-info" id="btn-show-even">Show sum number even</button>
-                    <div id="number-even"></div>
+                <div class="input-group mb-3">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" id="show-array">Show Array</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" id="filter-names">Filter Names</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" id="filter-numbers">Filter Numbers</button>
+                    </div>
                 </div>
-            </article>
-            <article>
-                <div>
-                    <button class="buttons btn-info" id="btn-show-positive-number">Show sum number even</button>
-                    <div id="positive-number"></div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger" id="clear-fields">Clear Fields</button>
+                    <button type="button" class="btn btn-danger" id="clear-result">Clear Result</button>
                 </div>
-            </article>
-            <article>
-                <div>
-                    <button class="buttons btn-info" id="btn-show-sum-odd">Show sum number odd</button>
-                    <div id="sum-odd-number"></div>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <select class="selects" id="show-select"></select>
-                </div>
-            </article>
-            <article>
-                <button id="show-table" class="buttons btn-info">Show Table</button>
-                <div id="id-table">
-                    
-                </div>
-            </article>
-        </section>
-    </main>
-    <footer><small>&copy;Guimba - <span id="year"></span></small></footer>
+            </div>
+            <div class="col-sm-4">
+                <label class="labels" id="result"></label>
+            </div>
+        </div>
+    </form>
 </body>
 
 </html>

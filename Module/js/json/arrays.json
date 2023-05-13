@@ -1,15 +1,15 @@
 [
     {
         "class": "dropdown-item",
-        "href": "./Pages/Arrays/AddObjectArray.html", 
+        "href": "./Pages/Arrays/Reduce.html", 
         "target":"content-iframe",
-        "name":"Add Object Array"
+        "name":"Array Reduce"
     },
     {
         "class": "dropdown-item",
-        "href": "./Pages/Arrays/array.html", 
+        "href": "./Pages/Arrays/AddObjectArray.html", 
         "target":"content-iframe",
-        "name":"Function Array"
+        "name":"Add Object Array"
     },
     {
         "class": "dropdown-item",
@@ -97,8 +97,8 @@
     },
     {
         "class": "dropdown-item",
-        "href": "./Pages/Arrays/Reduce.html", 
+        "href": "./Pages/Arrays/RecordArray.html", 
         "target":"content-iframe",
-        "name":"Array Reduce"
+        "name":"Record in Array"
     }
 ]

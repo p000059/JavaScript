@@ -1,4 +1,4 @@
-import { createLabel } from '../PublicFunctions/Labels.js'
+import { createLabel } from '/JavaScript/Module/js/Publics/labels.js'
 
 let array = [15, 113, 89, 47, 200, 2, 300, 1, 12, 26]
 
@@ -21,7 +21,7 @@ function showResult(event) {
     array.forEach(searchBiggerNumber)
 
     function searchBiggerNumber(element, index) {
-        console.log(`Position: ${index} \nElement: ${element}`)
+        /* console.log(`Position: ${index} \nElement: ${element}`) */
         if (element > resultNumber) {
             resultNumber = element
             position = index

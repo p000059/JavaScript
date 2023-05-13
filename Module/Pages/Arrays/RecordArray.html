@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Marcelo Guimba">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="DOM, document, document.getElementById, getElementById, Basic Javascript, JS, select, option, array">
+    <meta name="decriptiton" content="Show Array">
+    <title>Record in Array</title>
+    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/JavaScript/Module/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
+    <script type="module" src="/JavaScript/Module/js/Operations/Arrays/RecordArray.js" defer></script>
+</head>
+
+<body>
+    <form>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Type your name:</span>
+                    </div>
+                    <input id="name" type="text" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Enter your Email:</span>
+                    </div>
+                    <input id="email" type="email" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Fone:</span>
+                    </div>
+                    <input id="fone" type="fone" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">CPF:</span>
+                    </div>
+                    <input id="cpf" type="text" class="form-control">
+                </div>
+                
+                
+            </div>
+            <div class="col-sm-4">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success" id="save">Save</button>
+                    <button type="button" class="btn btn-success" id="show">Show Register</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning" id="clear-fields">Clear Fields</button>
+                    <button type="button" class="btn btn-danger" id="clear-tbody">Clear Tbody</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+        <div class="col container-fluid">
+            <div class="mb-3">
+                <table id="tableDecryptWord" class="table table-bordered table-hover table-striped">
+                    <thead class="table-success">
+                        <tr>
+                            <th class="font-size: 14px">
+                                Nome
+                            </th>
+                            <th class="font-size: 14px">
+                                Email
+                            </th>
+                            <th class="font-size: 14px">
+                                Telefone
+                            </th>
+                            <th class="font-size: 14px">
+                                CPF
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="result-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

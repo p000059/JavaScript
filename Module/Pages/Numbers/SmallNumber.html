@@ -1,22 +1,37 @@
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<script type="module" src="../js/Operations/SmallNumber.js" defer></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<form>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Array</span>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Number</title>
+    <link rel="shortcut icon" href="/JavaScript/Module/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
+    <script type="module" src="/JavaScript/Module/js/Operations/Numbers/SmallNumber.js" defer></script>
+
+</head>
+
+<body>
+    <form>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Array</span>
+                    </div>
+                    <input id="array-input" class="form-control"></input>
                 </div>
-                <input id="array-input" class="form-control"></input>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success" id="execute">Find Smallest Number</button>
+                    <button type="button" class="btn btn-danger" id="clear">Clear</button>
+                </div>
             </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-success" id="execute">Find Smallest Number</button>
-                <button type="button" class="btn btn-danger" id="clear">Clear</button>
+            <div class="col-sm-4">
+                <label class="labels" id="result"></label>
             </div>
         </div>
-        <div class="col-sm-4">
-            <label class="labels" id="result"></label>
-        </div>
-    </div>
-</form>
+    </form>
+</body>
+
+</html>

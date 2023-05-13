@@ -1,50 +1,83 @@
+import { createLabel } from '/JavaScript/Module/js/Publics/labels.js'
 
-(function () {
-    let dateYear = new Date()
-    let year = dateYear.getFullYear()
-    document.getElementById('footerYear').innerHTML = year
-})()
+const arrayNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-const arrayEven = [0, 2, 4, 6, 8]
-const arrayOdd = [1, 3, 5, 7, 9]
+const showArraysPage = document.querySelector('#show-arrays')
+showArraysPage.addEventListener('click', () => showArrays())
 
-document.getElementById('shift').value = arrayEven
-
-function showPush(){
-    let number = document.getElementById('push').value
-    arrayEven.push(number)
-    document.getElementById('push').value = arrayEven
+function showArrays() {
+    document.querySelector('#array').value = `[${arrayNumber}]`
+    document.querySelector('#array-even').value = `[${arrayEven()}]`
+    document.querySelector('#array-odd').value = `[${arrayOdd()}]`
 }
 
-function showPop(){
-    let number = document.getElementById('pop').value
-    arrayOdd.pop(number)
-    document.getElementById('pop').value = arrayOdd
+const clearArraysPage = document.querySelector('#clear-arrays')
+clearArraysPage.addEventListener('click', () => clearArrays())
+
+function clearArrays() {
+    document.querySelector('#array').value = ''
+    document.querySelector('#array-even').value = ''
+    document.querySelector('#array-odd').value = ''
 }
 
-function showShift(){
-    document.getElementById('shift').value = arrayEven
-    arrayEven.shift()
-    document.getElementById('shift').value = arrayEven
+const showPush = document.querySelector('#show-push')
+showPush.addEventListener('click', () => execPush())
+
+function execPush() {
+    let number = Number.parseInt(document.querySelector('#push-array').value)
+    typeof number === 'number' ? arrayNumber.push(number) : arrayNumber.push(0)
 }
 
-function showUnShift(){
-    let number = document.getElementById('unShift').value
-    let newNumber = arrayOdd.unshift(number)
-    document.getElementById('unShift').value = newNumber
+const exeShowPop = document.querySelector('#show-pop')
+exeShowPop.addEventListener('click', () => showPop())
+
+function showPop() {
+    let number = document.querySelector('#pop-array').value
+    typeof number === 'number' ? arrayNumber.pop() : arrayNumber.pop(0)
 }
 
-function showSlice(){
-    let initialNumber = document.getElementById('initialNumber').value
-    let finalNumber = document.getElementById('finalNumber').value
+const execShowShift = document.querySelector('#show-shift')
+execShowShift.addEventListener('click', () => showShift())
 
-    let resultArray = arrayEven.slice(initialNumber, finalNumber)
-
-    document.getElementById('slice').value = resultArray
+function showShift() {
+    return arrayNumber.shift()
 }
 
-function showSplice(){
-    let indexDelete = document.getElementById('splice').value
-    let arrayNew = arrayOdd.splice(indexDelete)
-    document.getElementById('splice').value = arrayNew
+const execShowUnshift = document.querySelector('#show-unshift')
+execShowUnshift.addEventListener('click', () => showUnShift())
+
+function showUnShift() {
+    let number = document.querySelector('#unshift-array').value
+    arrayNumber.unshift(number)
+}
+
+const execShowSlice = document.querySelector('#show-slice')
+execShowSlice.addEventListener('click', () => showSlice())
+
+function showSlice() {
+    let initialNumber = document.querySelector('#initial-number').value
+    let finalNumber = document.querySelector('#final-number').value
+
+    let resultArray = arrayNumber.slice(initialNumber, finalNumber)
+
+    document.querySelector('#array').value = `[${resultArray}]`
+}
+
+const execShowSplice = document.querySelector('#show-splice')
+execShowSplice.addEventListener('click', () => showSplice())
+
+function showSplice() {
+    let startIndex = document.querySelector('#splice-number').value
+    let deleteCount = 0
+    let itemOne = 20
+    let itemTwo = 30
+    arrayNumber.splice(startIndex, deleteCount, itemOne, itemTwo)
+}
+
+function arrayEven() {
+    return arrayNumber.filter((number) => number % 2 === 0)
+}
+
+function arrayOdd() {
+    return arrayNumber.filter((number) => number % 2 === 1)
 }

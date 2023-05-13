@@ -1,3 +1,5 @@
+import { createLabel } from '/JavaScript/Module/js/Publics/labels.js'
+
 const names = ['Sam', 'John', 'Samuel', 'Paul', 'Erick', 'James']
 const numbers = [3, 9, 5, 7, 12, 13, 67, 34, 56, 11, 25]
 
@@ -43,7 +45,7 @@ function showExecMap() {
 
 function showExecString() {
     const result = names.map((name) => name.toUpperCase())
-    document.querySelector('#show-string').innerHTML = result
+    createLabel(document.querySelector('#show-string').innerHTML = result)
     console.log(result)
 }
 

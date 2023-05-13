@@ -1,5 +1,5 @@
-import {createLabel} from '../PublicFunctions/Labels.js'
-import {clearFields} from '../PublicFunctions/Clear.js'
+import { createLabel } from '/JavaScript/Module/js/Publics/labels.js'
+import { clearFields } from '/JavaScript/Module/js/Publics/clearString.js'
 
 var execute = document.querySelector('#execute')
 execute.addEventListener('click', (event) => showResult(event))

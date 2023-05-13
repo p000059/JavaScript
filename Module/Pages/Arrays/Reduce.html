@@ -9,52 +9,44 @@
     <meta name="keywords" content="Array, Map, arrow functions, map, filter">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Show Reduce</title>
-    <script type="text/javascript" src="js/AnonymousFunction.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.esm.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link type="text/css" rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link type="text/css" rel="stylesheet" href="css/custom.css">
-    <link rel="shortcut icon" href="img/82IT.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/JavaScript/Module/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
+    <script type="module" src="/JavaScript/Module/js/Operations/Arrays/Reduce.js" defer></script>
 </head>
 
 <body>
 
-    <div class="container">
+    <form>
         <div class="row">
-            <div class="col">
-                <div class="row">
-                    <div class="col">
-                        <span class="container-cyan bg-dark text-white border rounded-3 d-block align-content-center">
-                            <h1 class="d-flex justify-content-center">Funções em JavaScript</h1> 
-                        </span>
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <div class="container-fluid">
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                    <div class="navbar-nav">
-                                        <a class="nav-link active" aria-current="page" href="#">Functions</a>
-                                        <a class="nav-link" href="pages/Map.html">Map</a>
-                                        <a class="nav-link" href="pages/Filter.html">Filter</a>
-                                        <a class="nav-link" href="pages/Reduce.html">Reduce</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
+            <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Array Reduce</span>
                     </div>
+                    <input id="array" class="form-control"></input>
                 </div>
-                <div class="row bt-3 mt-3">
-                    <div class="col">
-
-                        <div id="carregando">Reduce</div>
-
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Proposed Value Initial</span>
                     </div>
+                    <input id="proposed-value" class="form-control"></input>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success" id="execute">Show Sum Array</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger" id="clear-fields">Clear Fields</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger" id="clear-result">Clear Result</button>
                 </div>
             </div>
+            <div class="col-sm-4">
+                <label class="labels" id="result"></label>
+            </div>
         </div>
-    </div>
+    </form>
 
 </body>
 
