@@ -7,15 +7,15 @@
     },
     {
         "class": "dropdown-item",
-        "href": "./Pages/ObjectJS_AJAX/JSONToArrayJS.html",
+        "href": "/JavaScript/Module/Pages/ObjectJS_AJAX/JSONtoJavascriptArray.html",
         "target": "content-iframe",
-        "name": "JSON to Array"
+        "name": "JSON to Javascript Array"
     },
     {
         "class": "dropdown-item",
-        "href": "./Pages/ObjectJS_AJAX/JSONToJS.html",
+        "href": "/JavaScript/Module/Pages/ObjectJS_AJAX/JSONToJavascriptObject.html",
         "target": "content-iframe",
-        "name": "JSON to JavaScript"
+        "name": "JSON to JavaScript Object"
     },
     {
         "class": "dropdown-item",

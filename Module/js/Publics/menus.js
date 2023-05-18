@@ -1,90 +1,43 @@
 
-fetch('js/json/string.json')
+fetch('/JavaScript/Module/js/json/string.json')
   .then(response => response.json())
-  .then(data => receiveString(data))
+  .then(data => receiveObject(data, '#strings'))
   .catch(error => console.error(error));
 
-function receiveString(json) {
-  let idStrings = document.querySelector('#strings')
-
-  for (let i in json) {
-    let a = document.createElement('a')
-    a.className = json[i].class
-    a.href = json[i].href
-    a.target = json[i].target
-    a.innerHTML = json[i].name
-    idStrings.appendChild(a)
-  }
-}
-
-fetch('js/json/numbers.json')
+fetch('/JavaScript/Module/js/json/numbers.json')
   .then(response => response.json())
-  .then(data => receiveNumbers(data))
+  .then(data => receiveObject(data, '#numbers'))
   .catch(error => console.error(error))
 
-function receiveNumbers(json) {
-  let idNumbers = document.querySelector('#numbers')
-
-  for (let i in json) {
-    let a = document.createElement('a')
-    a.className = json[i].class
-    a.href = json[i].href
-    a.target = json[i].target
-    a.innerHTML = json[i].name
-    idNumbers.appendChild(a)
-  }
-}
-
-fetch('js/json/arrays.json')
+fetch('/JavaScript/Module/js/json/arrays.json')
   .then(response => response.json())
-  .then(data => receiveArrays(data))
+  .then(data => receiveObject(data, '#arrays'))
   .catch(error => console.error(error))
 
-function receiveArrays(json) {
-  let idNumbers = document.querySelector('#arrays')
-
-  for (let i in json) {
-    let a = document.createElement('a')
-    a.className = json[i].class
-    a.href = json[i].href
-    a.target = json[i].target
-    a.innerHTML = json[i].name
-    idNumbers.appendChild(a)
-  }
-}
-
-fetch('js/json/basicHTML.json')
+fetch('/JavaScript/Module/js/json/basicHTML.json')
   .then(response => response.json())
-  .then(data => receiveBasicHTML(data))
+  .then(data => receiveObject(data, '#basic-html'))
   .catch(error => console.error(error))
 
-function receiveBasicHTML(json) {
-  let idNumbers = document.querySelector('#basic-html')
-
-  for (let i in json) {
-    let a = document.createElement('a')
-    a.className = json[i].class
-    a.href = json[i].href
-    a.target = json[i].target
-    a.innerHTML = json[i].name
-    idNumbers.appendChild(a)
-  }
-}
-
-fetch('js/json/ObjectAJAX.json')
+fetch('/JavaScript/Module/js/json/ObjectAJAX.json')
   .then(response => response.json())
-  .then(data => receiveObject(data))
+  .then(data => receiveObject(data, '#object-ajax'))
   .catch(error => console.error(error))
 
-function receiveObject(json) {
-  let idNumbers = document.querySelector('#object-ajax')
+fetch('/JavaScript/Module/js/json/table.json')
+  .then(response => response.json())
+  .then(data => receiveObject(data, '#tables'))
+  .catch(error => console.error(error))
 
-  for (let i in json) {
+function receiveObject(json, id) {
+  let objects = document.querySelector(id)
+
+  json.forEach(element => {
     let a = document.createElement('a')
-    a.className = json[i].class
-    a.href = json[i].href
-    a.target = json[i].target
-    a.innerHTML = json[i].name
-    idNumbers.appendChild(a)
-  }
+    a.className = element.class
+    a.href = element.href
+    a.target = element.target
+    a.innerHTML = element.name
+    objects.appendChild(a)
+  })
 }

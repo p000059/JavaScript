@@ -11,7 +11,7 @@ function loadServer() {
 
     xhttp.open("GET", "https://dbsys.herokuapp.com/home/readAll");
     xhttp.send();
-
+    
     return obj;
 }
 

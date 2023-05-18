@@ -1,27 +1,75 @@
-function showTbody(event, idTbody, array) {
+function showTable(obj, string) {
+    let div = document.querySelector(string)
+    let table = document.createElement('table')
 
-    let tbody = document.querySelector(idTbody);
+    table.className = 'table table-striped table-bordered table-hover'
+    table.appendChild(createThead(obj))
+    table.appendChild(createTbody(obj))
+    table.appendChild(createTfoot(obj))
+    div.appendChild(table)
+    return div
+}
 
-    array.forEach(increment);
+function createThead(array) {
+    let thead = document.createElement('thead')
+    let tr = document.createElement('tr')
 
-    function increment(element) {
+    let key = returnKeyFromArray(array)
 
-        let tr = document.createElement('tr');
+    key.forEach(element => {
+        let th = document.createElement('th')
+        th.innerHTML = element[0].toUpperCase() + element.substring(1)
+        tr.appendChild(th)
+    })
 
-        for (let i in element) {
+    thead.className = 'thead-dark'
+    thead.appendChild(tr)
+    return thead
+}
 
-            let td = document.createElement('td');
-            td.innerHTML = element[i];
-            tr.appendChild(td);
+function createTbody(array) {
+    let tbody = document.createElement('tbody')
+    array.forEach(showTbody)
+
+    function showTbody(elements) {
+        let tr = document.createElement('tr')
+        for (let i in elements) {
+            let td = document.createElement('td')
+            td.innerHTML = elements[i]
+            tr.appendChild(td)
         }
-
-        tbody.appendChild(tr);
+        tbody.appendChild(tr)
     }
-    event.innerHTML = tbody
+    return tbody
 }
 
-function clearTbody(idTbody) {
-    document.querySelector(idTbody).innerHTML = ''
+function createTfoot(array) {
+    
+    let key = returnKeyFromArray(array)
+    let tfoot = document.createElement('tfoot')
+    let tr = document.createElement('tr')
+    let td = document.createElement('td')
+
+    td.style.textAlign = 'center'
+    td.style.fontSize = '60%'
+    td.colSpan = key.length
+    td.className = "font-size: 14px"
+    td.innerHTML = "Foot Table"
+
+    tr.appendChild(td)
+    tfoot.appendChild(tr)
+
+    return tfoot
 }
 
-export { showTbody, clearTbody }
+function returnKeyFromArray(array){
+    let key = ''
+    array.forEach(element => key = Object.keys(element))
+    return key
+}
+
+function clearTable(object) {
+    document.querySelector(object).innerHTML = ''
+}
+
+export { showTable, createThead, createTbody, createTfoot, returnKeyFromArray, clearTable }
