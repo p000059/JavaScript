@@ -1,0 +1,13 @@
+@media screen and (max-width: 800px){
+
+    body{
+        background-color: darkgray;
+    }
+}
+
+@media screen and (orientation: landscape){
+
+    body{
+        background-color: darkgray;
+    }
+}

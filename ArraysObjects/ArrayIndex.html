@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Index</title>
+    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/JavaScript/Module/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
+    <script type="module" src="/JavaScript/Module/js/Operations/Arrays/ArrayIndex.js" defer></script>
+</head>
+
+<body>
+    <form>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Array Users</span>
+                    </div>
+                    <input id="show-array-users" class="form-control"></input>
+                    <button type="button" class="btn btn-info" id="clear-users">Clear Users</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Array Numbers</span>
+                    </div>
+                    <input id="show-array-numbers" class="form-control"></input>
+                    <button type="button" class="btn btn-info" id="clear-numbers">Clear Numbers</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Array Even</span>
+                    </div>
+                    <input id="show-array-even" class="form-control"></input>
+                    <button type="button" class="btn btn-info" id="clear-even">Clear Array Even</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Array Odd</span>
+                    </div>
+                    <input id="show-array-odd" class="form-control"></input>
+                    <button type="button" class="btn btn-info" id="clear-odd">Clear Array Odd</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Add User(start of array)</span>
+                    </div>
+                    <input id="new-user-start" class="form-control"></input>
+                    <button type="button" class="btn btn-success" id="add-user-start">Execute</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Add User(end of array)</span>
+                    </div>
+                    <input id="new-user-end" class="form-control"></input>
+                    <button type="button" class="btn btn-success" id="add-user-end">Execute</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Remove User(first element)</span>
+                    </div>
+                    <input id="remove-first-user" class="form-control"></input>
+                    <button type="button" class="btn btn-success" id="remove-initial-user">Execute</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Remove User(last element)</span>
+                    </div>
+                    <input id="remove-last-user" class="form-control"></input>
+                    <button type="button" class="btn btn-success" id="remove-final-user">Execute</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">First Index(Array Users)</span>
+                    </div>
+                    <input id="word-index" class="form-control"></input>
+                    <button type="button" class="btn btn-success" id="find-index-users">Execute</button>
+                    <button type="button" class="btn btn-info" id="clear-first-index">Clear</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Last Index(Array Users)</span>
+                    </div>
+                    <input id="word" class="form-control"></input>
+                    <button type="button" class="btn btn-success" id="last-index">Execute</button>
+                    <button type="button" class="btn btn-info" id="clear-last-index">Clear</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Find Element(Array Users)</span>
+                    </div>
+                    <input id="user" class="form-control"></input>
+                    <button type="button" class="btn btn-success" id="find-element">Execute</button>
+                    <button type="button" class="btn btn-info" id="clear-find-element">Clear</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" id="get-first-element">Get First Element
+                            Users</button>
+                        <button type="button" class="btn btn-success" id="get-last-element">Get Last Element
+                            Users</button>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" id="array-users">Show Users</button>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" id="array-numbers">Show Numbers</button>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" id="array-even">Show Array Even</button>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" id="array-odd">Show Array Odd</button>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger" id="clear-fields">Clear Fields</button>
+                    <button type="button" class="btn btn-danger" id="clear-result">Clear Result</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <label class="labels" id="result"></label>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

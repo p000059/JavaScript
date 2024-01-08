@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Array Map</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/ArrayMap.js" defer></script>
+
+</head>
+
+<body class="container mt-3">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <span class="container-cyan bg-dark text-white border rounded-3 d-block align-content-center">
+                            <h1 class="d-flex justify-content-center">Funções de Array em JavaScript</h1>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container mt-3">
+                        <form id="registrationForm">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Array Numbers</span>
+                                    <span class="btn btn-secondary" id="show-array-number">-></span>
+                                </div>
+                                <input id="array-numbers" class="form-control"></input>
+                                <div class="input-group-prepend">
+                                    <span class="btn btn-secondary input-group-text" id="clear-array-number">X</span>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Array String</span>
+                                    <span class="btn btn-secondary" id="show-array-string">-></span>
+                                </div>
+                                <input id="array-string" class="form-control"></input>
+                                <div class="input-group-prepend">
+                                    <span class="btn btn-secondary input-group-text" id="clear-array-string">X</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container mt-3">
+                        <div id="clear-table"><button class="mt-3 btn btn-secondary" id="clear-results">Clear Results</button> </div>
+                        <div id="touppercase"><button class="mt-3 btn btn-secondary">Convert UpperCase</button></div>
+                        <div id="result">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

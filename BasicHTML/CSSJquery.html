@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery CSS</title>
+        <style>
+            div{
+                margin: 5px;
+                width: 100px;
+                height: 80px;
+                background-color: rgb(73, 225, 236);
+            }
+        </style>
+        <script src="js/jquery-3.6.1.js"></script>
+        <script>
+
+            $(document).ready(function(){
+
+                $("h1").css({
+                    "color":"blue",
+                    "borderStyle":"solid",
+                    "text-align":"Center"
+                });
+
+            });
+
+        </script>
+        <link type="text/css" rel="stylesheet" href="css/custom.css">
+        <link type="image/x-icon" rel="shortcut icon" href="img/82IT.ico">
+    </head>
+    <body>
+        <header class="header-format">
+            jQuery CSS
+        </header>
+        <main>
+            
+            <h1>Utilizando CSS com jQuery</h1>
+
+        </main>
+        <footer class="footer-format">
+            <small>&copy;Guimba - 2022</small>
+        </footer>
+    </body>
+</html>

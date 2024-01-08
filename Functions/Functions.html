@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Show Arrows Functions">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="keywords" content="Array, Map, arrow functions, map, filter">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Show Functions</title>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.esm.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/PageLinkNavbar.js"></script>
+    <script type="text/javascript" src="js/AnonymousFunction.js"></script>
+    <script type="text/javascript" src="js/FunctionMap.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link type="text/css" rel="stylesheet" href="css/custom.css">
+    <link rel="shortcut icon" href="img/82IT.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12">
+            <div class="wrapper">
+                <header class="header">
+                    <div>
+                        <div class="container-fluid cabecalho bg-title d-flex justify-content-center">
+                            <h1>Funções em JavaScript</h1>
+                        </div>
+                    </div>
+                    <nav class="nav navbar navbar-expand-lg navbar-light">
+                        <ul class="navbar-nav">
+                            <li class="nav-item header-tab nav-link show">Function</li>
+                            <li class="nav-item header-tab nav-link">Map</li>
+                            <li class="nav-item header-tab nav-link">Filter</li>
+                            <li class="nav-item header-tab nav-link">Reduce</li>
+                        </ul>
+                    </nav>
+                </header>
+                <main class="main">
+                    <div class="container-fluid">
+                        <div class="tab-content show">
+
+                            Function
+
+                        </div>
+                        <div class="tab-content hide">
+
+                            <div class="row mb-1 mt-1">
+                                <div class="col-3">
+                                    <div class="form-floating mb-2">
+                                        <input type="text" class="form-control" id="valueOne" placeholder="Digite aqui">
+                                        <label for="floatingInput">Passar Valor Aqui:</label>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-floating mb-2">
+                                        <label id="objArray" class="form-control content border"></label>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-floating mb-2">
+                                        <label id="mult2" class="form-control content border"></label>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-floating mb-2">
+                                        <label id="mult3" class="form-control content border"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-2 d-grid">
+                                    <button type="button" data-toggle="modal" class="btn btn-secondary btn-block" onclick="showArrayObject()">Mostrar Array</button>
+                                </div>
+                                <div class="col-2 d-grid">
+                                    <button type="button" data-toggle="modal" class="btn btn-secondary btn-block" onclick="changeValue()">Array: String para Int</button>
+                                </div>
+                                <div class="col-2 d-grid">
+                                    <button type="button" data-toggle="modal" class="btn btn-secondary btn-block" onclick="showMapChange()">Mudar por 2</button>
+                                </div>
+                                <div class="col-2 d-grid">
+                                    <button type="button" data-toggle="modal" class="btn btn-secondary btn-block" onclick="stringToUpper()">Converter Maiúsculo</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-content hide">
+
+                            <div class="row mb-1 mt-1">
+                                <div class="col-2 d-grid">
+                                    <button type="button" data-toggle="modal" class="btn btn-secondary btn-block" onclick="showNumberEven()">Number Even</button>
+                                </div>
+                                <div class="col-10">
+                                    <div class="form-floating mb-2">
+                                        <label id="showNumberEven" class="form-control content border"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                            </div>
+
+                        </div>
+                        <div class="tab-content hide">
+
+                            <div class="row mt-1 mb-1">
+                                <div class="col-3 d-grid">
+                                    <button type="button" class="btn btn-secondary btn-block" onclick="reduceArray()">Reduce</button>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-floating mb2">
+                                        <label id="filterNumber" class="form-control content border"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

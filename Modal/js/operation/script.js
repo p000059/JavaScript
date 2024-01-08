@@ -1,115 +1,64 @@
-let execute = document.querySelector('#execute')
-execute.addEventListener('click', (event) => register(event))
+document.addEventListener('DOMContentLoaded', function () {
 
-let clear = document.querySelector('#clear-fields')
-clear.addEventListener('click', () => clearFields())
+	let registerButton = document.querySelector('#register-button');
+	let closeConfirmationButton = document.querySelector('#close-confirmation-button');
+	let closeModalButton = document.querySelector('#close-modal-button');
+	let clearFields = document.querySelector('#clear-fields')
 
-let closeModal = document.querySelector('#button-close')
-execute.addEventListener('click', () => closeConfirmationModal())
 
-function register(event) {
+	registerButton.addEventListener('click', register);
+	closeConfirmationButton.addEventListener('click', closeConfirmationModal);
+	closeModalButton.addEventListener('click', closeConfirmationModal);
+	clearFields.addEventListener('click', clearField)
+});
 
-	event.preventDefault()
-	event.stopPropagation()
+function clearField() {
 
-	// Get input values
-	var name = document.querySelector('#name').value;
-	var code = document.querySelector('#code').value;
-	var description = document.querySelector('#description').value;
-	var value = document.querySelector('#value').value;
-
-	// Display confirmation modal with user details
-	var confirmationMessage = `
-      <p><strong>Nome:</strong> ${name}</p>
-      <p><strong>Código:</strong> ${code}</p>
-      <p><strong>Descrição:</strong> ${description}</p>
-	  <p><strong>Preço:</strong> ${value}</p>
-      <p>Cadastrado com Sucesso!</p>
-    `;
-
-	document.querySelector('#confirmationMessage').innerHTML = confirmationMessage;
-	showConfirmationModal();
-}
-
-function showConfirmationModal() {
-	var modal = document.querySelector('#confirmationModal');
-	modal.style.display = 'block';
-	modal.classList.add('show');
-	document.body.style.overflow = 'hidden';
-}
-
-function closeConfirmationModal() {
-	var modal = document.querySelector('#confirmationModal');
-	modal.style.display = 'none';
-	modal.classList.remove('show');
-	document.body.style.overflow = '';
-}
-
-function clearFields() {
-
-	document.querySelector('#name').value = ''
-	document.querySelector('#code').value = ''
-	document.querySelector('#description').value = ''
-	document.querySelector('#value').value = ''
+	document.getElementById('name').value = ''
+	document.getElementById('code').value = ''
+	document.getElementById('description').value = ''
+	document.getElementById('value').value = ''
 
 }
 
-/* 
-function registerPart(event) {
+function register() {
 
-	event.preventDefault()
-	event.stopPropagation()
-
-	let code = ""
-	let name = ""
-	let description = ""
-	let value = 0
-
-	code = document.querySelector('#code').value
-	name = document.querySelector('#name').value
-	description = document.querySelector('#description').value
-	value = document.querySelector('#value').value
+	let name = document.querySelector('#name').value;
+	let code = document.querySelector('#code').value;
+	let description = document.querySelector('#description').value;
+	let value = document.querySelector('#value').value;
 
 	let codeCapitalize = code.toUpperCase()
 
-	let url = 'http://localhost:8088/orcamento/insertpart';
+	let url = 'http://localhost:8088/orcamento/insertpart'
 
 	let data = {
 		code: codeCapitalize,
 		name: name,
 		description: description,
 		value: value
-	};
+	}
 
 	makeFetchPostRequest(url, data)
 
-	createLabel(document.querySelector('#result').innerHTML = data)
-	closeModal()
-
+	showConfirmationModal();
 }
 
-function clearFields() {
-
-	document.querySelector('#firstName').value = ''
-	document.querySelector('#lastName').value = ''
-	document.querySelector('#email').value = ''
-	document.querySelector('#password').value = ''
+function showConfirmationModal() {
+	let modal = document.querySelector('#confirmation-modal');
+	modal.style.display = 'block';
+	modal.classList.add('show');
+	document.body.style.overflow = 'hidden';
 }
 
-function createLabel(object) {
-	let label = document.createElement('label')
-	label.className = 'labels'
-	label.textContent = object
-	return label
+function closeConfirmationModal() {
+	let modal = document.querySelector('#confirmation-modal');
+	modal.style.display = 'none';
+	modal.classList.remove('show');
+	document.body.style.overflow = '';
 }
 
-/* function closeModal() {
-
-	let modal = document.querySelector('#modal-confirm')
-	modal.style.display = 'none'
-} */
-
-/* function makeFetchPostRequest(url, data) {
+function makeFetchPostRequest(url, data) {
 
 	fetch(url, {
 		method: 'POST',
@@ -122,15 +71,17 @@ function createLabel(object) {
 			if (!response.ok) {
 				throw new Error('Network response was not ok');
 			}
-			return response.json();
+			return response.json(); // This returns a promise
 		})
 		.then(data => {
-
-			console.log(data);
+			console.log(`Data: ${data}`)
 		})
 		.catch(error => {
-
 			console.error('Fetch Error:', error);
+			throw error;
 		});
 }
- */
+
+
+
+

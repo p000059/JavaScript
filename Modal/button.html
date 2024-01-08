@@ -19,10 +19,9 @@
 </head>
 
 <body class="container mt-3">
-
     <!-- Registration Form -->
     <div class="container">
-        <h2 class="mt-4 mb-4">Formulário de Cadastro</h2>
+        <h2 class="mt-4 mb-4">Cadastro de Peças</h2>
         <form id="registrationForm">
             <div class="form-group">
                 <label for="name">Nome:</label>
@@ -34,37 +33,36 @@
             </div>
             <div class="form-group">
                 <label for="description">Descrição:</label>
-                <input type="text" class="form-control" id="description" required>
+                <textarea type="text" class="form-control" rows="4" id="description" required></textarea>
             </div>
             <div class="form-group">
-                <label for="value">Preço:</label>
+                <label for="value">Valor:</label>
                 <input type="text" class="form-control" id="value" required>
             </div>
-            <button type="button" class="btn btn-primary" id="execute">Cadastrar</button>
-            <button type="button" class="btn btn-default" id="clear-fields">Limpar Campos</button>
+            <button type="button" class="btn btn-primary" id="register-button">Cadastrar</button>
+            <button type="button" class="btn btn-secondary" id="clear-fields">Limpar Campos</button>
         </form>
     </div>
 
-    <!-- Registration Confirmation Modal -->
-    <div class="modal" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal" id="confirmation-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Registro Confirmado</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeConfirmationModal()">
+                    <h5 class="modal-title" id="exampleModalLabel">Registrado com Sucesso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        id="close-confirmation-button">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body" id="confirmationMessage">
-                    <!-- Confirmation message will be displayed here -->
-                </div>
+                <div class="modal-body" id="confirmation-message"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" onclick="closeConfirmationModal()">Close</button>
+                    <button type="button" class="btn btn-secondary" id="close-modal-button">Close</button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <div id="result">
 

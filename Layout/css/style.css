@@ -1,0 +1,38 @@
+/* 2 - Media query */
+h1 {
+    color: blue;
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        color: red;
+    }
+}
+
+/* 3 Media query inverse */
+p {
+    background-color: cadetblue;
+    color: darkslategrey;
+}
+
+@media screen and (min-width: 800px) {
+    p {
+        background-color: darkslategray;
+        color: cadetblue;
+    }
+}
+
+/* h3 - landscape */
+h3 {
+    display: none;
+}
+
+@media screen and (orientation: landscape) {
+    h3 {
+        display: block;
+    }
+
+    body{
+        background-color: darkgray;
+    }
+}
