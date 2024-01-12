@@ -1,0 +1,19 @@
+
+
+.button {
+
+    margin-left: 33%;
+    background: #02a08b;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #37ad9e;
+}

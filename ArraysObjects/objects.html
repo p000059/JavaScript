@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Objects</title>
+    
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -20,20 +22,31 @@
 <body class="container mt-3">
     <!-- Registration Form -->
     <div class="container">
-        <h2 class="mt-4 mb-4">Object Key and Object Values</h2>
-        <form id="registrationForm">
-            <div class="form-group">
-                <label for="object">Name: </label>
-                <input type="text" class="form-control" id="property-one" required>
-            </div>
-            <div class="form-group">
-                <label for="object">Last name: </label>
-                <input type="text" class="form-control" id="property-two" required>
-            </div>
-            <button type="button" class="btn btn-primary" id="register-object">Register Object</button>
-            <button type="button" class="btn btn-success" id="show-object">Show Object</button>
-            <button type="button" class="btn btn-secondary" id="clear-fields">Clear Fields</button>            
-        </form>
+        <section>
+            <h2 class="mt-4 mb-4">Object Key and Object Values</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label>Name: </label>
+                    <input type="text" class="form-control" id="property-one" required>
+                </div>
+                <div class="form-group">
+                    <label>Last name: </label>
+                    <input type="text" class="form-control" id="property-two" required>
+                </div>
+                <button type="button" class="btn btn-primary" id="register-object">Register Object</button>
+                <button type="button" class="btn btn-success" id="show-object">Show Object</button>
+                <button type="button" class="btn btn-secondary" id="clear-fields">Clear Fields</button>
+                <button type="button" class="btn btn-secondary" id="clear-result">Clear Result</button>            
+            </form>
+        </section>
+        <section>
+            <h2 class="mt-4 mb-4">Copy Object A for Object B</h2>
+            <input type="submit" class="btn btn-primary" value="Copy Object" id="copy">
+        </section>
+        <section>
+            <h2 class="mt-4 mb-4">Show Properties Object</h2>
+            <input type="submit" class="btn btn-primary" value="Show Properties Object" id="prop">
+        </section>
     </div>
     <div class="container">
         <div class="form-group">
