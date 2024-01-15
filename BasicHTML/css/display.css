@@ -3,56 +3,6 @@
     src: url('../font/Marhey-VariableFont_wght.ttf') format('truetype');
 }
 
-.button {
-
-    display: inline-block;
-    margin-left: 33%;
-    background: #02a08b;
-    color: #fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 5px;
-    margin: 0px;
-    text-decoration: none;
-}
-
-.button:hover {
-    background: #37ad9e;
-}
-
-h2 {
-    color: #03302a;
-    text-align: center;
-    direction: rtl;
-    text-transform: uppercase;
-    font-family: 'Marhey';
-}
-
-.text-word {
-    color: #03302a;
-    text-align: center;
-    direction: rtl;    
-    text-indent: 60px;
-    letter-spacing: 5px;
-    line-height: 1.5;
-    word-spacing: 15px;
-}
-
-.font-css{
-    letter-spacing: 3px;
-    word-spacing: normal;
-    font-style: oblique;
-    font-size: 15px;
-    font-weight: 800;
-}
-
-@font-face {
-    font-family: 'Marhey';
-    src: url('../font/Marhey-VariableFont_wght.ttf') format('truetype');
-}
-
 section {
     border: 1px dotted #0581f5;
     padding: 10px;
