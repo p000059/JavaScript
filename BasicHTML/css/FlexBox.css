@@ -1,0 +1,43 @@
+section{
+    margin-top: 22px;
+}
+
+.flex-father {
+    background: #6574fa;
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width:600px) {
+    .flex-father{
+        flex-direction: column;
+    }
+}
+
+.flex-father div {
+    background: #fff;
+    border: 1px solid #2e2d2d;
+    margin: 5px;
+    padding: 30px;
+    text-align: center;
+}
+
+.flex-mother{
+    background: #6574fa;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width:600px) {
+    .flex-mother{
+        flex-direction: column-reverse;
+    }
+}
+
+.flex-mother div{
+    background: #fff;
+    border: 1px solid #2e2d2d;
+    margin: 5px;
+    padding: 30px;
+    text-align: center;
+}
