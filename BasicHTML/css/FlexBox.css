@@ -1,17 +1,12 @@
-section{
+section {
     margin-top: 22px;
 }
 
+/* Flex Father */
 .flex-father {
     background: #6574fa;
     display: flex;
     flex-direction: row;
-}
-
-@media screen and (max-width:600px) {
-    .flex-father{
-        flex-direction: column;
-    }
 }
 
 .flex-father div {
@@ -22,22 +17,79 @@ section{
     text-align: center;
 }
 
-.flex-mother{
+@media screen and (max-width:600px) {
+    .flex-father {
+        flex-direction: column;
+    }
+}
+
+
+/* Flex Mother */
+.flex-mother {
     background: #6574fa;
     display: flex;
     flex-direction: row-reverse;
 }
 
-@media screen and (max-width:600px) {
-    .flex-mother{
-        flex-direction: column-reverse;
-    }
-}
-
-.flex-mother div{
+.flex-mother div {
     background: #fff;
     border: 1px solid #2e2d2d;
     margin: 5px;
     padding: 30px;
     text-align: center;
+}
+
+@media screen and (max-width:600px) {
+    .flex-mother {
+        flex-direction: column-reverse;
+    }
+}
+
+
+/* Flex Wrap */
+.flex-wrap {
+    background: #6574fa;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-wrap div {
+    background: #fff;
+    border: 1px solid #2e2d2d;
+    margin: 5px;
+    padding: 30px;
+    text-align: center;
+}
+
+@media screen and (max-width:600px) {
+    .flex-wrap {
+        flex-direction: column;
+    }
+}
+
+
+/* Flex Content and Items */
+.flex-content-items {
+    background: #6574fa;
+    height: 200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.flex-content-items div {
+    background: #fff;
+    border: 1px solid #2e2d2d;
+    margin: 5px;
+    padding: 30px;
+    text-align: center;
+}
+
+@media screen and (max-width:600px) {
+    .flex-content-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
