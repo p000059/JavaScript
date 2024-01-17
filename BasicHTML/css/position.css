@@ -1,0 +1,72 @@
+/* Every standard HTML tag has a static position. */
+
+.container {
+    position: relative;
+    display: inline-block;
+    background: url('../img/cidade1.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.div1 {
+    position: relative;
+    z-index: 3;
+    left: 20px;
+    top: 50px;
+    width: 30%;
+    height: 100px;
+    display: inline-block;
+    background: yellow;
+}
+
+.div2 {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    width: 30%;
+    height: 100px;
+    display: inline-block;
+    background: rgb(218, 4, 247);
+}
+
+.div3 {
+    width: 30%;
+    height: 100px;
+    display: inline-block;
+    background: red;
+    position: absolute;
+    top:150px;
+    right: 50%;
+}
+
+.whats {
+    position: fixed;
+    background: green;
+    color: white;
+    width: 80px;
+    height: 80px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.container-background{
+
+    position: relative;
+    display: inline-block;
+    background: url('../img/cidade.jpg');
+    background-size: cover;
+    opacity: 0.5;
+    width: 100%;
+    height: 400px;
+    border: 2px dashed greenyellow;
+}
+
+.center{
+    border: 2px solid green;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+}
