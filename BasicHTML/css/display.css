@@ -3,13 +3,6 @@
     src: url('../font/Marhey-VariableFont_wght.ttf') format('truetype');
 }
 
-section {
-    border: 1px dotted #0581f5;
-    padding: 10px;
-    margin: 40px;
-
-}
-
 #p1 {
     display: block;
 }

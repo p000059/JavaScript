@@ -7,18 +7,17 @@
     <title>Section</title>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
     <header>
-        <!-- <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav> -->
-        <nav>
+        <div class="header-style">
+            <p>HTML Semantic</p>            
+        </div>
+        <nav class="navbar">
             <a href="#">Home</a>
             <a href="#">Produtos</a>
             <a href="#">Serviços</a>
@@ -68,29 +67,32 @@
         </section>
         
         <!-- Mark -->
-        <p>Temos neste texto um conteúdo <mark>importante</mark> que precisa ser marcado.</p>
+        <section>
+            <p>Temos neste texto um conteúdo <mark>importante</mark> que precisa ser marcado.</p>
+        </section>
 
         <!-- figure / figcaption -->
-        <figure>
-            <img src="img/favicon.ico" alt="Ícone 82 IT">
-            <figcaption>Um logo Marca</figcaption>
-        </figure>
+        <section>
+            <figure class="figure-layout">
+                <img src="img/cidade1.jpg" alt="cidade">
+                <figcaption>Um logo Marca</figcaption>
+            </figure>
+        </section>
     </main>
     <!-- Aside -->
-    <aside>
-        <h4>Categorias</h4>
-        <ul>
-            <li><a href="#">JavaScript</a></li>
-            <li><a href="#">React</a></li>
-            <li><a href="#">Node</a></li>
-        </ul>
-    </aside>
+    <section>
+        <aside>
+            <h4>Categorias</h4>
+            <ul>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">Node</a></li>
+            </ul>
+        </aside>
+    </section>    
     <footer>
-        <div>
-            <h2>Entre em contato</h2>
-            <p>Telefone</p>
+            <p>Entre em contato</p>
             <p>Email: guimabaro@gmail.com</p>
-        </div>
         <p>&copy;Criado por Guimba 2024</p>
     </footer>
 </body>

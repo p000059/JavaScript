@@ -6,31 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capitalize</title>
-    <link rel="shortcut icon" href="/JavaScript/Module/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/JavaScript/Module/css/bootstrap.min.css">
-    <script type="module" src="/JavaScript/Module/js/Operations/Strings/Capitalize.js" defer></script>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/Capitalize.js" defer></script>
+
 </head>
 
 <body>
+    <header class="header-style">
+        <p>String</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Capitalize.html">Capitalize</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="#">Position Character</a>
+                <div class="dropdown-content">
+                    <a href="FirstCharacter.html">First Character</a>
+                    <a href="LastCharacter.html">Last Character</a>
+                </div>
+            </li>
+            <li><a href="Interpolation.html">Interpolation</a></li>
+            <li><a href="Invert.html">Invert String</a></li>      
+            <li><a href="Palindrome.html">Palindrome</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="#">String Case</a>
+                <div class="dropdown-content">
+                    <a href="StringLower.html">Lower Case</a>
+                    <a href="StringUpper.html">Upper Case</a>
+                    <a href="SubString.html">Sub String</a>
+                </div>
+            </li>          
+            <li><a href="VowelCount.html">String Vowel Count</a></li>      
+        </ul>
+    </nav>
+
+    <h2>String Capitalize</h2>
+    
     <form>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">String Capitalize:</span>
-                    </div>
-                    <input id="words" type="text" class="form-control">
-                </div>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-success" id="execute">Execute</button>
-                    <button type="button" class="btn btn-danger" id="clear">Clear</button>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <label class="labels" id="result"></label>
-            </div>
-        </div>
+
+        <section>
+            
+            <input id="words" type="text" class="input" placeholder="Digite aqui uma frase">
+
+            <button type="button" class="button" id="execute">Execute</button>
+            <button type="button" class="button" id="clear">Clear</button>            
+
+        </section>        
+
     </form>
+
+    <!-- Result -->
+    <section>
+        <div id="result"></div>
+    </section>
+
 </body>
 
 </html>

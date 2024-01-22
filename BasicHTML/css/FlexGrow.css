@@ -1,0 +1,63 @@
+/* Flex Grow */
+
+/* * {
+    box-sizing: border-box;
+} */
+
+.flex-grow {
+    background: #6574fa;
+    height: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+}
+
+.flex-grow div {
+    background: #fff;
+    border: 1px solid #2e2d2d;
+    margin: 5px;
+    padding: 30px;
+    text-align: center;
+}
+
+.fg001 {
+    flex: 15%;
+}
+
+.fg002 {
+    flex: 70%;
+}
+
+.fg003 {
+    flex: 15%;
+}
+
+.fg004 {
+    flex: 50%;
+}
+
+.fg005 {
+    flex: 50%;
+}
+
+.fg006 {
+    flex: 25%;
+}
+
+.fg007 {
+    flex: 25%;
+}
+
+.fg008 {
+    flex: 50%;
+}
+
+
+
+
+@media screen and (max-width:600px) {
+    .flex-grow {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

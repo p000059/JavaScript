@@ -1,74 +1,34 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
-    <title>Register Email</title>
     <meta charset="utf-8">
     <meta name="author" content="Marcelo">
-    <link rel="shortcut icon" href="../img/82IT.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/Buttons.css">
+
+    <title>Register Email</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script>
+
+
 </head>
 
 <body>
 
-    <div id="principal">
-        <header class="hero">
+    <h3>Register Email</h2>
+        <h3>receive news</h3>
+        <div id="newsletterForm">
+            <label for="email">Email:</label>
+            <input class="input" placeholder="register here" type="email" id="txtEmail">
+            <button id="send" class="button">Send</button>
+            <button class="button" id="clear">Clear</button>
+        </div>
+        <div id="newsletterFeedback">
 
-
-
-            <div class="hero-content">
-                <h1>Register Email</h1>
-                <h2>receive news</h2>
-                <div id="newsletterForm">
-                    <label for="email">Email:</label>
-                    <input placeholder="register here" type="email" id="txtEmail">
-                    <button id="btn" onclick="registerEmail()">Enviar</button>
-                </div>
-                <div id="newsletterFeedback">
-
-                </div>
-            </div>
-        </header>
-
-        <main>
-
-            <section class="content-section">
-                <div class="card card-1">
-                    <img src="imagens/card_01.png" alt="">
-                    <p>Seletores</p>
-                </div>
-
-                <div class="card card-2">
-                    <img src="imagens/card_02.jpg" alt="">
-                    <p>Posicionamento</p>
-                </div>
-
-                <div class="card card-3">
-                    <img src="imagens/card_03.jpg" alt="">
-                    <p>Fontes</p>
-                </div>
-            </section>
-
-            <section class="content-section">
-                <article>
-                    <header class="content-header">
-                        <h2>Titulo do article</h2>
-                    </header>
-                    <p>Paragrafo 1</p>
-                    <p>Paragrafo 2</p>
-                </article>
-            </section>
-
-        </main>
-
-        <footer class="rodape">
-
-            <p>Copyright &copy; 2018</p>
-
-        </footer>
-    </div>
-
-    <script src="js/script.js"></script>
+        </div>
 </body>
 
 </html>

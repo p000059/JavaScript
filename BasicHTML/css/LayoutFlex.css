@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+}
+
+.header {
+    background: #011aff;
+    padding: 80px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 1px 3px #797977;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: #cfcfcd;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #757575;
+    padding: 14px 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.navbar a:hover {
+    background: #757574;
+    color: #cfcfcd;
+    font-weight: bold;
+}
+
+.body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.card {
+    flex-grow: 1;
+    background: #ccc;
+    height: 100px;
+    margin: 1%;
+}
+
+@media screen and (max-width:600px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
