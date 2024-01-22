@@ -1,3 +1,4 @@
+"use strict"
 
 const fruits = ["Banana", "Orange", "Apple", "Mango", "lemon"];
 

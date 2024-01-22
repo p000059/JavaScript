@@ -10,13 +10,13 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 function registerEmail() {
-    const txtEmail = document.getElementById('txtEmail')
-    const msgFeedback = document.getElementById('newsletterFeedback')
+    const txtEmail = document.querySelector('#word')
+    const msgFeedback = document.querySelector('#result')
     
     msgFeedback.innerHTML = txtEmail.value
 }
 
 function clearFields(){
-    document.querySelector('#txtEmail').value = ''
-    document.querySelector('#newsletterFeedback').innerHTML = ''
+    document.querySelector('#word').value = ''
+    document.querySelector('#result').innerHTML = ''
 }
