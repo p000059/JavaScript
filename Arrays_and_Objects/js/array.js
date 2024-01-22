@@ -1,6 +1,8 @@
 "use strict"
 
-const fruits = ["Banana", "Orange", "Apple", "Mango", "lemon"];
+import { showTable, clearTable } from "../module/table.js"
+
+const fruits = ["Banana","Laranja","Maçã","Manga","Limão","Pêra","Uva","Melancia","Goiaba","Maracujá"]
 
 document.addEventListener('DOMContentLoaded', function(){
 
@@ -9,19 +11,14 @@ document.addEventListener('DOMContentLoaded', function(){
     const save = document.querySelector('#save')
     
     save.addEventListener('click', saveString)
-    showArray.addEventListener('click', showArrayInput)    
+    showArray.addEventListener('click', showArrayF)    
     clearField.addEventListener('click', clearFields)    
 })
 
-function clearFields(){
+function showArrayF(){
     
-    document.querySelector('#array-add').value = ''
-    document.querySelector('#array').value = ''    
-}
+   document.querySelector('#result').innerHTML = fruits
 
-function showArrayInput(){
-    
-    document.querySelector('#array').value = fruits
 }
 
 function saveString(event) {
@@ -33,4 +30,9 @@ function saveString(event) {
     fruits.push(stringName)
 }
 
+function clearFields(){
+    
+    document.querySelector('#array-add').value = ''
+    document.querySelector('#result').innerHTML = ''    
+}
 

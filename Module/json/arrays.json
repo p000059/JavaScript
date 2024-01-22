@@ -1,0 +1,104 @@
+[
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/Reduce.html", 
+        "target":"content-iframe",
+        "name":"Array Reduce"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/AddObjectArray.html", 
+        "target":"content-iframe",
+        "name":"Add Object Array"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/ArrayConcatJoinToString.html", 
+        "target":"content-iframe",
+        "name":"Array Concat Join to String"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/ArrayEvery.html", 
+        "target":"content-iframe",
+        "name":"Array Every"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/ArrayFilter.html", 
+        "target":"content-iframe",
+        "name":"Array Filter"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/ArrayFind.html", 
+        "target":"content-iframe",
+        "name":"Array Find"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/ArrayForeach.html", 
+        "target":"content-iframe",
+        "name":"Array Foreach"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/ArrayIndex.html", 
+        "target":"content-iframe",
+        "name":"Array Index"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/ArrayMap.html", 
+        "target":"content-iframe",
+        "name":"Array Map"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/ArrayPushPopShiftUnshiftSliceSplice.html", 
+        "target":"content-iframe",
+        "name":"Array Push Pop Shift"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/ArrayReverseReduce.html", 
+        "target":"content-iframe",
+        "name":"Reverse Reduce"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/ArraySingle.html", 
+        "target":"content-iframe",
+        "name":"Single"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/ArrayWhile.html", 
+        "target":"content-iframe",
+        "name":"Array While"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/DiversifiedArray.html", 
+        "target":"content-iframe",
+        "name":"Diversified Array"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/Filter.html", 
+        "target":"content-iframe",
+        "name":"Array Filter"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/Map.html", 
+        "target":"content-iframe",
+        "name":"Map"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/Arrays/RecordArray.html", 
+        "target":"content-iframe",
+        "name":"Record in Array"
+    }
+]

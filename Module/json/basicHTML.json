@@ -1,0 +1,98 @@
+[
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/AlterAtribute.html",
+        "target": "content-iframe",
+        "name": "Alter Atribute"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/BoxModel.html",
+        "target": "content-iframe",
+        "name": "Box Model"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/CheckBox.html",
+        "target": "content-iframe",
+        "name": "Check Box"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/Confirm.html",
+        "target": "content-iframe",
+        "name": "Confirmation"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/CSSJquery.html",
+        "target": "content-iframe",
+        "name": "CSS Jquery"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/Fate.html",
+        "target": "content-iframe",
+        "name": "Fate"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/Images.html",
+        "target": "content-iframe",
+        "name": "Images"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/LinkScript.html",
+        "target": "content-iframe",
+        "name": "Link Script"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/ModelLess.html",
+        "target": "content-iframe",
+        "name": "Model Less"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/ParseVariable.html",
+        "target": "content-iframe",
+        "name": "Parse Variable"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/Select.html",
+        "target": "content-iframe",
+        "name": "Select"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/Selectors.html",
+        "target": "content-iframe",
+        "name": "Selectors"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/Slide.html",
+        "target": "content-iframe",
+        "name": "Slide"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/SwitchJS.html",
+        "target": "content-iframe",
+        "name": "Switch JavaScript"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/Ternary.html",
+        "target": "content-iframe",
+        "name": "Ternary"
+    },
+    {
+        "class": "dropdown-item",
+        "href": "./Pages/BasicHTML/Variable.html",
+        "target": "content-iframe",
+        "name": "Variable"
+    }
+]
