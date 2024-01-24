@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Button</title>
+    <title>Scroll</title>
 
     <link rel="shortcut icon" href="../Module/img/favicon.ico" type="image/x-icon">
 
@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="../Module/css/Event.css">
 
-    <script src="js/EventButton.js" defer></script>
+    <script src="js/Focus.js" defer></script>
 
 </head>
 <body>
@@ -20,17 +20,19 @@
         <p id="p-header">Event</p>
     </header>
 
-    <h1>Event Button</h1>
+    <h1>Focus</h1>
 
     <section>
-        <div>
-            <button id="add-event" class="button">Add Event</button>
-            <button id="remove-event" class="button">Remove Event</button>
-        </div>
+        
+        <form>
+            <input class="input" type="text" id="name" placeholder="Testando o foco...">
+        </form>
+
     </section>
 
     <section>
-        <div id="result"></div>
+        <div id="result-focus"></div>
+        <div id="result-blur"></div>
     </section>
 
 </body>

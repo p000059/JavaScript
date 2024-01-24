@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Button</title>
+    <title>Key Up</title>
 
     <link rel="shortcut icon" href="../Module/img/favicon.ico" type="image/x-icon">
 
@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="../Module/css/Event.css">
 
-    <script src="js/EventButton.js" defer></script>
+    <script src="js/Mouse.js" defer></script>
 
 </head>
 <body>
@@ -20,17 +20,24 @@
         <p id="p-header">Event</p>
     </header>
 
-    <h1>Event Button</h1>
+    <h1>Mouse</h1>
 
     <section>
-        <div>
-            <button id="add-event" class="button">Add Event</button>
-            <button id="remove-event" class="button">Remove Event</button>
-        </div>
+        <h4 id="mouse">Event Key Down and Up</h4>
     </section>
 
     <section>
-        <div id="result"></div>
+        <h4 id="mouse-double">Double click</h4>
+    </section>
+
+    <section>
+        <div id="result-one"></div>
+        <div id="result-two"></div>
+        <div id="double-click"></div>
+    </section>
+
+    <section>
+        <div id="mouse-move"></div>
     </section>
 
 </body>
