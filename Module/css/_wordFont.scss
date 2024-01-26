@@ -1,0 +1,55 @@
+h1{
+
+    border: 1px solid $primary;
+    box-shadow: 3px 3px 5px #454747;
+    color: $primary;
+    text-align: center;
+    text-shadow: 1px 2px 2px #2e2d2d;
+    direction: rtl;
+    text-transform: uppercase;
+    font-family: 'Marhey';
+    padding: 6px;
+    margin: 6px 4px 6px 4px;
+}
+
+h2 {
+    border: 1px solid $primary;
+    box-shadow: 3px 3px 5px #454747;
+    color: $primary;
+    text-align: center;
+    text-shadow: 1px 2px 2px #2e2d2d;
+    text-transform: uppercase;
+    font-family: 'Marhey';
+    padding: 6px;
+    margin: 4px 3px 4px 3px;
+}
+
+h3 {
+    border: 1px solid $primary;
+    box-shadow: 3px 3px 5px #454747;
+    color: $primary;
+    text-align: center;
+    text-shadow: 1px 2px 2px #2e2d2d;
+    text-transform: capitalize;
+    font-family: 'Marhey';
+    padding: 3.5px;
+    margin: 5px 4px 5px 4px;
+}
+
+.text-word {
+    color: $primary;
+    text-align: center;
+    direction: rtl;    
+    text-indent: 60px;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    word-spacing: 15px;
+}
+
+.font-css{
+    letter-spacing: 3px;
+    word-spacing: normal;
+    font-style: oblique;
+    font-size: 15px;
+    font-weight: 800;
+}

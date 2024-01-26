@@ -1,0 +1,14 @@
+
+.header-style {
+    background: $primary;
+    padding: 60px;
+
+    p {
+        color: $pHeaderColor;
+        font-family: $nameFontMarhey;
+        font-size: 30px;
+        text-shadow: $textShadow;
+        text-align: center;
+    }
+}
+

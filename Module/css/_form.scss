@@ -1,0 +1,53 @@
+@mixin propertiesButton(){
+    display: inline-flex;
+    margin-left: 33%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.button {
+
+    @include propertiesButton();
+    background: $primary;
+    color: $pHeaderColor;
+    border-color: $primary;    
+
+    &:hover{
+        background: $backgroundButtonHover;
+        color: $primary;
+    }
+}
+
+.input {
+    display: inline-flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 5px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.button-inline-block {
+
+    /* Important: property display */
+    display: inline-block;
+
+    margin: 10px;
+    width: 20%;
+    height: 50px;
+    background: $primary;
+    color: $pHeaderColor;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+

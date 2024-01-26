@@ -1,0 +1,14 @@
+
+@mixin propertiesText(){
+    text-align: center;
+    font-size: 60px;
+    padding: 2rem;
+}
+
+.title {
+    font-family: $fontPermanent;
+    text-shadow: $shadownPermantentMaker;
+    color: $colorTitle;
+    background-color: $backgroundTitleColor;
+    @include propertiesText();
+}

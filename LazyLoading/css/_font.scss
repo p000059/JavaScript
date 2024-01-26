@@ -1,0 +1,14 @@
+$fontMarhey: Marhey;
+$fontPermanent: Permanent;
+$linkMarhey: url('../font/Marhey-VariableFont_wght.ttf') format('truetype');
+$linkPermantentMaker: url('../font/PermanentMarker-Regular.ttf') format('truetype');
+
+@font-face {
+    font-family: $fontMarhey;
+    src: $linkMarhey;
+}
+
+@font-face {
+    font-family: $fontPermanent;
+    src: $linkPermantentMaker;
+}

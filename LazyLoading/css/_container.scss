@@ -1,0 +1,31 @@
+/* Container de Imagens */
+@mixin propertiesImageContainer(){
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+.container {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.image-container {
+    @include propertiesImageContainer();
+    img {
+        display: block;
+        margin: 2px auto 2px;
+        width: 1000px;
+        height: 600px;
+    }
+
+    p {
+        text-align: center;
+        font-family: $fontPermanent;
+        text-shadow: $shadownPermantentMaker;
+        font-size: 30px;
+        font-weight: 800;
+        margin-top: 60px;
+        margin-bottom: 0px;
+    }
+}

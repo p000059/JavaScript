@@ -1,0 +1,54 @@
+@font-face {
+  font-family: Marhey;
+  src: url("../font/Marhey-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: Permanent;
+  src: url("../font/PermanentMarker-Regular.ttf") format("truetype");
+}
+* {
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #b9b7b7;
+}
+
+.title {
+  font-family: Permanent;
+  text-shadow: 2px 2px 2px #8a8989;
+  color: #fff;
+  background-color: #026d4d;
+  text-align: center;
+  font-size: 60px;
+  padding: 2rem;
+}
+
+/* Container de Imagens */
+.container {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.image-container {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #444;
+}
+.image-container img {
+  display: block;
+  margin: 2px auto 2px;
+  width: 1000px;
+  height: 600px;
+}
+.image-container p {
+  text-align: center;
+  font-family: Permanent;
+  text-shadow: 2px 2px 2px #8a8989;
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 60px;
+  margin-bottom: 0px;
+}/*# sourceMappingURL=style.css.map */

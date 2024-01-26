@@ -76,6 +76,7 @@ h3 {
 #p1 {
   display: block;
 }
+
 #p1:hover {
   display: none;
 }
@@ -219,4 +220,4 @@ section {
 .display-inline {
   border: 1px solid #02ceac;
   display: inline;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=index.css.map */
