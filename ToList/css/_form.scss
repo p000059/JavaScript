@@ -1,0 +1,75 @@
+$colorText: #414142;
+$colorBack: #fdfdfd;
+
+@mixin todoFormEditForm() {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+@mixin paddingInputSelect() {
+    padding: 0.25rem 0.5rem;
+}
+
+@mixin propertiesButton($direction) {
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: $direction;
+    align-items: $direction;
+    transition: 0.4s;
+}
+
+button {
+    background-color: $colorBack;
+    color: $colorText;
+    border: 2px solid $colorText;
+    @include propertiesButton(center);
+
+    &:hover {
+        background-color: $colorText;
+        color: $colorBack;
+    }
+
+    &:hover>i {
+        color: $colorBack;
+    }
+
+    i {
+        color: $colorText;
+        font-weight: bold;
+        pointer-events: none;
+    }
+}
+
+input,
+select {
+    @include paddingInputSelect();
+}
+
+#todo-form,
+#edit-form {
+    @include todoFormEditForm();
+}
+
+#todo-form,
+#edit-form {
+    p {
+        margin-bottom: .5rem;
+        font-weight: bold;
+    }
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control {
+    input {
+        margin-right: 0.3rem;
+    }
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
+}

@@ -2,14 +2,18 @@
 
 const images = document.querySelectorAll('.image-container img')
 
-images.forEach((image) => {
-    console.log(image.alt)
-})
+const observer = new IntersectionObserver((entries, observer) => {
 
-/* for(let image of images){
-    
-    if(image.getAttribute('alt') === 'Forest6'){
-        console.log(image.getAttribute('alt'))
-        break
-    }
-} */
+    entries.forEach(entry => {
+
+        if(!entry.isIntersecting) return
+
+        const image = entry.target
+
+        image.src = image.src.replace("&w10", "&w=1000")
+    })
+}, {})
+
+images.forEach((image) => {
+    observer.observe(image)
+})

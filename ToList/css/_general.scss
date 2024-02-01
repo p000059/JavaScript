@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../img/001.jpg');
+    background-position: inherit;
+    background-size: cover;
+}
+
+.hide {
+    display: none;
+}
