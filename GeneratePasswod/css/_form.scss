@@ -1,0 +1,85 @@
+input:focus {
+    outline: none;
+}
+
+#register-form {
+    background-color: #b8b8b8;
+    padding: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 2.2rem;
+    }
+
+    p {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #3a3939;
+        font-size: 0.8rem;
+    }
+
+    input[type="submit"]{
+        background-color: #3337ff;
+        color: #fff;
+        opacity: 0.8;
+        border: none;
+        border-radius: 1rem;
+        padding: 1rem 1.4rem;
+        max-width: 150px;
+        cursor: pointer;
+        align-self: flex-end;
+        transition: 0.4s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-weight: bold;
+        margin-bottom: 0.6rem;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid #aaa;        
+        padding: 0.6rem 0;
+        border-radius: 5px;
+    }
+}
+
+#generate-password {
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+        color: #3337ff;
+    }
+}
+
+#register-form #generated-password {
+    border: 1px solid #3337ff;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1.4rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: none;
+
+    p {
+        color: #3337ff;
+        margin-bottom: 0.5rem;
+    }
+}

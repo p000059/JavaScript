@@ -1,0 +1,28 @@
+@media screen and (max-width:500px) {
+    
+  .todo{
+    flex-direction: column;
+  }
+}
+
+.container {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .highlight {
+    background-color: yellow;
+  }
+
+  .todo {
+    display: flex;
+  }
+
+  .text-remove {
+    display: inline-flex;
+    padding: 20px;
+  }
+
+  .todo .text-remove {
+    flex-direction: column;
+  }

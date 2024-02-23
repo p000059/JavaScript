@@ -1,0 +1,25 @@
+#result {
+    margin: 2px;
+    display: flex;
+
+    .button {
+        width: 200px;
+    }
+    
+    .input {
+        width: 600px;
+    }
+}
+
+.result {
+    border-radius: 6px;
+    border: 1px solid #636161;
+    font-size: 21px;
+    font-family: Digital;
+    padding: 7px 10px;
+    text-align: center;
+    color: #fd0202;
+    background-color: #e0f7fa;
+    margin: 1px;
+    width: 100%;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            /* 100% da altura da viewport */
+            justify-content: center;
+            /* Centraliza os itens horizontalmente */
+            align-items: center;
+            /* Centraliza os itens verticalmente */
+        }
+
+        .button-container {
+            display: inline-flex;
+            width: 100%;
+            /* Ocupa toda a largura da .container */
+        }
+
+        .button {
+            width: 100%;
+            padding: 15px 30px;
+            margin: 2px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="button-container">
+            <button class="button">Botão 1</button>
+            <button class="button">Botão 2</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+@media screen and (max-width: 430px) {
+    * {
+        margin: 0;
+    }
+
+    .header-style {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button:hover {
+        background-color: #fd5304;
+        color: #f3f0ed;
+    }
+
+    .input {
+        width: 100%;
+        margin: 3px 0;
+    }
+
+    #result {
+        flex-direction: column;
+    }
+
+    .result {
+        width: 60px;
+    }
+}
