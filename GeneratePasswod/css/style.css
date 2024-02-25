@@ -89,6 +89,43 @@ input:focus {
 #register-form input[type=submit]:hover {
   opacity: 1;
 }
+#register-form #generate-options button {
+  background-color: #3337ff;
+  color: #fff;
+  opacity: 0.8;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 1.4rem;
+  max-width: 150px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: 0.4s;
+  display: block;
+  margin: 0 auto;
+}
+#register-form #generate-options button:hover {
+  opacity: 1;
+}
+#register-form #copy-password {
+  background-color: #3337ff;
+  color: #fff;
+  opacity: 0.8;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 1.4rem;
+  max-width: 150px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: 0.4s;
+  margin: 1rem auto;
+  background-color: transparent;
+  border: 2px solid #3337ff;
+  color: #3337ff;
+  padding: 0.5rem 1rem;
+}
+#register-form #copy-password:hover {
+  opacity: 1;
+}
 
 .form-control {
   margin-bottom: 1rem;
@@ -129,4 +166,28 @@ input:focus {
 #register-form #generated-password p {
   color: #3337ff;
   margin-bottom: 0.5rem;
+}
+
+#generate-options {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  display: none;
+}
+#generate-options .form-control {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#generate-options label {
+  font-size: 0.8rem;
+}
+#generate-options input[type=text] {
+  max-width: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

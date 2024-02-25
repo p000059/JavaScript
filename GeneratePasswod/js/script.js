@@ -3,6 +3,15 @@
 const generatedPasswordButton = document.querySelector('#generate-password')
 const generatedPasswordElement = document.querySelector('#generated-password')
 
+//New Functions
+const openCloseGenerationButton = document.querySelector('#open-generate-password')
+const generatePasswordContainer = document.querySelector('#generate-options')
+const lengthInput = document.querySelector('#length')
+const lettersInput = document.querySelector('#letters')
+const numbersInput = document.querySelector('#numbers')
+const symbolsInput = document.querySelector('#symbols')
+const copyPasswordButton = document.querySelector('#copy-password')
+
 //Functions
 
 const getLetterLowerCase = () => {
@@ -21,7 +30,7 @@ const getNumber = () => {
 }
 
 const getSymbol = () => {
-    const symbols = '#$%&*@<>!-_+=.'
+    const symbols = '#$%&*@-_'
     return symbols[Math.floor(Math.random() * symbols.length)]
 }
 
@@ -30,38 +39,22 @@ const generatedPassword = (getLetterLowerCase, getLetterUpperCase, getNumber, ge
     let password = ''
     const passwordLength = 10
     const generators = [
-        getLetterLowerCase(),
-        getLetterUpperCase(),
-        getNumber(),
-        getSymbol()
+        getLetterLowerCase,
+        getLetterUpperCase,
+        getNumber,
+        getSymbol
     ]
 
-    const randomValue = generators[Math.floor(Math.random() * generators.length)]
-
-    for(let i = 0; i < passwordLength.length; i++){
+    
+    for (let i = 0; i < passwordLength; i = i + 4) {
         
-        generators.forEach((value)=>{
+        generators.forEach((value) => {
             
+            const randomValue = generators[Math.floor(Math.random() * generators.length)]()
             password += randomValue
+            
         })
     }
-
-    /* 
-    
-    for (let i = 0; i < passwordLength.length; i = i + 4) {
-        generators.forEach(() => {
-            password += randomValue
-        })
-    }
-    
-    password = password.slice(0, passwordLength)
-    console.log(password)
-    generatedPasswordElement.style.display = 'block'
-    generatedPasswordElement.querySelector('h4').innerText = password 
-    
-    */
-
-    //password = generators
 
     console.log(password)
     generatedPasswordElement.style.display = 'block'
@@ -75,5 +68,9 @@ const generatedPassword = (getLetterLowerCase, getLetterUpperCase, getNumber, ge
 generatedPasswordButton.addEventListener('click', () => {
 
     generatedPassword(getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol)
+})
+
+openCloseGenerationButton.addEventListener('click', () => {
+    generatePasswordContainer.classList.toggle('hide')
 })
 
