@@ -4,12 +4,14 @@ const generatedPasswordButton = document.querySelector('#generate-password')
 const generatedPasswordElement = document.querySelector('#generated-password')
 
 //New Functions
-const openCloseGenerationButton = document.querySelector('#open-generate-password')
-const generatePasswordContainer = document.querySelector('#generate-options')
+const showHelp = document.querySelector('#show-help')
+const generateOptions = document.querySelector('#generate-options')
+
 const lengthInput = document.querySelector('#length')
 const lettersInput = document.querySelector('#letters')
 const numbersInput = document.querySelector('#numbers')
 const symbolsInput = document.querySelector('#symbols')
+
 const copyPasswordButton = document.querySelector('#copy-password')
 
 //Functions
@@ -30,35 +32,60 @@ const getNumber = () => {
 }
 
 const getSymbol = () => {
-    const symbols = '#$%&*@-_'
+    const symbols = '#$%&*@'
     return symbols[Math.floor(Math.random() * symbols.length)]
 }
 
 const generatedPassword = (getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol) => {
 
     let password = ''
-    const passwordLength = 10
-    const generators = [
-        getLetterLowerCase,
-        getLetterUpperCase,
-        getNumber,
-        getSymbol
-    ]
+    const passwordLength = +lengthInput.value
+    const generators = []
 
-    
-    for (let i = 0; i < passwordLength; i = i + 4) {
-        
+    /*  switch (generators) {
+         case lettersInput.checked:
+             generators.push(getLetterLowerCase, getLetterUpperCase)
+ 
+         case numbersInput.checked:
+             generators.push(getLetterLowerCase, getLetterUpperCase)
+ 
+         case symbolsInput.checked:
+             generators.push(getSymbol)
+ 
+         default:
+             generators.push(0)
+     } */
+
+    if (lettersInput.checked) {
+        generators.push(getLetterLowerCase, getLetterUpperCase)
+    }
+
+    if (numbersInput.checked) {
+        generators.push(getNumber)
+    }
+
+    if (symbolsInput.checked) {
+        generators.push(getSymbol)
+    }
+
+    if (generators.length === 0) {
+        return
+    }
+
+
+    for (let i = 0; i < passwordLength; i = i + generators.length) {
+
         generators.forEach((value) => {
-            
+
             const randomValue = generators[Math.floor(Math.random() * generators.length)]()
             password += randomValue
-            
+
         })
     }
 
     console.log(password)
     generatedPasswordElement.style.display = 'block'
-    generatedPasswordElement.querySelector('h4').innerText = password
+    generatedPasswordElement.querySelector('#new-password').innerText = password
 
 }
 
@@ -66,11 +93,28 @@ const generatedPassword = (getLetterLowerCase, getLetterUpperCase, getNumber, ge
 //Events
 
 generatedPasswordButton.addEventListener('click', () => {
-
     generatedPassword(getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol)
 })
 
-openCloseGenerationButton.addEventListener('click', () => {
-    generatePasswordContainer.classList.toggle('hide')
+showHelp.addEventListener('click', () => {
+    generateOptions.classList.toggle('hide')
 })
 
+copyPasswordButton.addEventListener('click', (e) => {
+
+    e.preventDefault()
+
+    const password = document.querySelector('#new-password').innerText
+
+    navigator.clipboard.writeText(password).then(() => {
+        copyPasswordButton.innerText = 'Senha Copiada'
+
+        
+        setTimeout(() => {
+            copyPasswordButton.innerText = 'copiar'
+        },1000)
+    })
+    
+    document.querySelector('#password').innerText = password
+    document.querySelector('#confirmpassword').innerText = password
+})

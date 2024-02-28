@@ -71,7 +71,6 @@ input:focus {
 #register-form p {
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #3a3939;
   font-size: 0.8rem;
 }
 #register-form input[type=submit] {
@@ -126,6 +125,19 @@ input:focus {
 #register-form #copy-password:hover {
   opacity: 1;
 }
+#register-form #show-help {
+  color: #3337ff;
+  font-weight: bold;
+  font-size: 0.7rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+#register-form #show-help:hover {
+  opacity: 1;
+  font-weight: 900;
+}
 
 .form-control {
   margin-bottom: 1rem;
@@ -152,27 +164,10 @@ input:focus {
   color: #3337ff;
 }
 
-#register-form #generated-password {
-  border: 1px solid #3337ff;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 1.4rem;
-  color: #333;
-  text-align: center;
-  margin-bottom: 1rem;
-  display: none;
-}
-#register-form #generated-password p {
-  color: #3337ff;
-  margin-bottom: 0.5rem;
-}
-
 #generate-options {
   margin-bottom: 1rem;
   padding: 1rem;
   border: 1px solid #ddd;
-  display: none;
 }
 #generate-options .form-control {
   flex-direction: row;

@@ -1,4 +1,19 @@
-$backButton:#3337ff;
+$backButton: #3337ff;
+
+@mixin showOptionPassowrd(){
+    color: #3337ff;
+    font-weight: bold;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+        font-weight: 900;
+    }
+}
 
 @mixin buttonsForm($color) {
     background-color: $color;
@@ -37,7 +52,6 @@ input:focus {
     p {
         text-align: center;
         margin-bottom: 1.5rem;
-        color: #3a3939;
         font-size: 0.8rem;
     }
 
@@ -60,6 +74,10 @@ input:focus {
         border: 2px solid $backButton;
         color: $backButton;
         padding: 0.5rem 1rem;
+    }
+
+    #show-help {
+        @include showOptionPassowrd();
     }
 }
 
@@ -91,29 +109,11 @@ input:focus {
     }
 }
 
-#register-form #generated-password {
-    border: 1px solid #3337ff;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding: 1.4rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 1rem;
-    display: none;
-
-    p {
-        color: #3337ff;
-        margin-bottom: 0.5rem;
-    }
-}
-
 #generate-options {
     margin-bottom: 1rem;
     padding: 1rem;
     border: 1px solid #ddd;
-    display: none;
-
+    
     .form-control {
         flex-direction: row;
         justify-content: space-between;

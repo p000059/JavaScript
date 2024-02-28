@@ -1,0 +1,23 @@
+$montSerrat: 'Serrat';
+$montSerratUrl: url('../font/Montserrat-VariableFont_wght.ttf') format('truetype');
+
+$marhey: 'Marhey';
+$marheyURL: url('../font/Marhey-VariableFont_wght.ttf')format('truetype');
+
+$maker: 'Marker';
+$makerUrl: url('../font/PermanentMarker-Regular.ttf') format('truetype');
+
+@font-face {
+    font-family: $montSerrat;
+    src: $montSerratUrl;
+}
+
+@font-face {
+    font-family: $maker;
+    src: $makerUrl;
+}
+
+@font-face {
+    font-family: $marhey;
+    src: $marheyURL;
+}
