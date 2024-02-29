@@ -1,0 +1,111 @@
+@mixin biXLgBiFileEarmakPlus(){
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 0.9rem;
+    padding: 5px;
+    transition: 0.3s;
+    color: #555;
+    cursor: pointer;
+    opacity: 0;
+
+    &:hover{
+        color: #fff;
+    }
+}
+
+@mixin inputButton() {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#add-note-container {
+    display: flex;
+    width: 400px;
+    margin: 1rem auto 0;
+    gap: 1rem;
+
+    input, button {
+        @include inputButton();
+        
+    }
+
+    input{
+        flex: 1;
+        background-color: transparent;
+        border: 1px solid #525356;
+        color: #fff;
+    }
+
+    button{
+        cursor: pointer;
+        background-color: #333;
+        color: #fff;
+        opacity: 0.6;
+        transition: 0.5s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+#notes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    padding: 2rem;
+    gap: 3rem;
+}
+
+.note {
+    min-height: 200px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #202124;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+    textarea{
+        background-color: transparent;
+        resize: none;
+        color: #ccc;
+        border: none;
+        height: 100%;
+        outline: none;
+    }
+
+    .bi-pin{
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        font-size: 1.2rem;
+        background-color: #333;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 3px;
+        opacity: 0.5;
+        transition: 0.7s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    .bi-x-lg{
+        @include biXLgBiFileEarmakPlus();
+    }
+
+    .bi-file-earmark-plus{
+        @include biXLgBiFileEarmakPlus();
+        top: 40px;
+    }
+
+    &:hover > i {
+        opacity: 1;
+    }
+}
+
+.note.fixed{
+    background-color: #3c3c3f;
+}
+
+

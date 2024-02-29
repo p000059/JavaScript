@@ -8,10 +8,44 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/82IT.ico" type="image/x-icon">
 
+    <link rel="stylesheet" href="./css/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
     <script src="./js/script.js" defer></script>
 
 </head>
 <body>
+    <header>
+        <h1>Dev Notes</h1>
+        <div id="search-container">
+            <i class="bi bi-search"></i>
+            <input type="text" id="search-input" placeholder="busque por uma nota">
+        </div>
+        <button id="export-notes">
+            Exportar CSV <i class="bi bi-download"></i>
+        </button>
+    </header>
+    <div id="add-note-container">
+        <input type="text" id="note-content" placeholder="O que deseja anotar?">
+        <button class="add-note"><i class="bi bi-plus-lg"></i></button>
+    </div>
+    
+    <div id="notes-container">
+        <div class="note fixed">
+            <textarea placeholder="adicione algum texto"></textarea>
+            <i class="bi bi-pin"></i>
+            <i class="bi bi-x-lg"></i>
+            <i class="bi bi-file-earmark-plus"></i>
+        </div>
+    </div>
+    
+    <div id="notes-container">
+        <div class="note">
+            <textarea placeholder="adicione algum texto"></textarea>
+            <i class="bi bi-pin"></i>
+            <i class="bi bi-x-lg"></i>
+            <i class="bi bi-file-earmark-plus"></i>
+        </div>
+    </div>
     
 </body>
 </html>
